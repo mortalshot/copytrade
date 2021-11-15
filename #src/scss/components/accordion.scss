@@ -1,0 +1,12 @@
+.accordion {
+    // .accordion__title
+    &__title {
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    // .accordion__text
+    &__text {
+    }
+}

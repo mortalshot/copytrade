@@ -1,0 +1,19 @@
+.tabs {
+	&__triggers {
+		display: flex;
+	}
+
+	&__triggers-item {
+	}
+
+	&__content {
+	}
+
+	&__content-item {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+}

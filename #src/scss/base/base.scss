@@ -1,0 +1,268 @@
+// base ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.col {
+    &-6,
+    &-12,
+    &-sm-3,
+    &-sm-5,
+    &-sm-6,
+    &-sm-7,
+    &-sm-9,
+    &-sm-12,
+    &-md-3,
+    &-md-4,
+    &-md-5,
+    &-md-6,
+    &-md-7,
+    &-md-8,
+    &-md-9,
+    &-md-12,
+    &-lg-3,
+    &-lg-6,
+    &-lg-9,
+    &-lg-12,
+    &-xl-3 {
+        width: 100%;
+        padding: 8px;
+        min-height: 1px;
+    }
+
+    &-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    &-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    &-sm-3 {
+        @media screen and (min-width: 576px) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+
+    &-sm-5 {
+        @media screen and (min-width: 576px) {
+            flex: 0 0 41.666%;
+            max-width: 41.666%;
+        }
+    }
+
+    &-sm-6 {
+        @media screen and (min-width: 576px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    &-sm-7 {
+        @media screen and (min-width: 576px) {
+            flex: 0 0 58.333%;
+            max-width: 58.333%;
+        }
+    }
+
+    &-sm-9 {
+        @media screen and (min-width: 576px) {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+
+    &-sm-12 {
+        @media screen and (min-width: 576px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    &-md-3 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+
+    &-md-4 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+    }
+
+    &-md-5 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 41.666%;
+            max-width: 41.666%;
+        }
+    }
+
+    &-md-6 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    &-md-7 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 58.333%;
+            max-width: 58.333%;
+        }
+    }
+
+    &-md-8 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 66.666%;
+            max-width: 66.666%;
+        }
+    }
+
+    &-md-9 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+
+    &-md-12 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    &-lg-3 {
+        @media screen and (min-width: 992px) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+
+    &-lg-4 {
+        @media screen and (min-width: 992px) {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+    }
+
+    &-lg-6 {
+        @media screen and (min-width: 992px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    &-lg-8 {
+        @media screen and (min-width: 992px) {
+            flex: 0 0 66.666%;
+            max-width: 66.666%;
+        }
+    }
+
+    &-lg-9 {
+        @media screen and (min-width: 992px) {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+
+    &-lg-12 {
+        @media screen and (min-width: 992px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    &-xl-3 {
+        @media screen and (min-width: 1200px) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+
+    &-xl-9 {
+        @media screen and (min-width: 1200px) {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+}
+
+.m {
+    &b-0 {
+        margin-bottom: 0 !important;
+    }
+}
+
+.p {
+    &-0 {
+        padding: 0 !important;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// site ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+body {
+    font-family: $fontMain;
+    font-weight: $fontWeight;
+    font-size: #{$fontSize}px;
+    line-height: #{$lineHeight}px;
+    color: $fontColor;
+    overflow-x: hidden;
+
+    @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+        font-size: calc(#{$fontSizeMobile}px + (#{$fontSize} - #{$fontSizeMobile}) * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(#{$lineHeight} / #{$fontSize});
+    }
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.site {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    &__main {
+        padding: $size-header-height 0px 0px 0px;
+
+        @media screen and (max-width: 767px) {
+            padding: $size-header-height-mobile 0px 0px 0px;
+        }
+    }
+
+    &__footer {
+        margin-top: auto;
+    }
+}
+
+[class*="__container"] {
+    max-width: calc($size-container + $containerPadding * 2) + px;
+    @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 1);
+    @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 1);
+    margin: 0 auto;
+}
+
+// buttons ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.btn {
+    text-align: center;
+    -webkit-appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+// titles ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
