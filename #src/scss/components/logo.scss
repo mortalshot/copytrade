@@ -1,0 +1,38 @@
+.logo {
+    position: relative;
+    width: 191px;
+    height: 42px;
+
+    svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: $transition ease all 0s;
+
+        &--full {
+            ._hide-sidebar & {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+
+        &--small {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            ._hide-sidebar & {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+    }
+}

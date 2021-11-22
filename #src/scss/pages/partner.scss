@@ -1,0 +1,775 @@
+// partner ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.partner {
+    margin-bottom: 24px;
+
+    &:first-child {
+        @include adaptiv-value("margin-top", 10, 0, 1);
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__rank {
+        padding: 8px 24px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        border-radius: 10px;
+    }
+
+    &__rank--light {
+        background-color: #bde1ff;
+    }
+}
+
+.withdrawal {
+    &__wrapper {
+        background: $White;
+        box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
+        border-radius: 10px;
+        @include adaptiv-value("padding-top", 32, 16, 1);
+        @include adaptiv-value("padding-bottom", 32, 16, 1);
+        @include adaptiv-value("padding-left", 40, 16, 1);
+        @include adaptiv-value("padding-right", 40, 16, 1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__left {
+        & > * {
+            :not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__label {
+        font-weight: 600;
+        @include adaptiv-font(12, 17, 10, 1);
+        @include adaptiv-value("letter-spacing", 0.96, 0.8, 1);
+        text-transform: uppercase;
+    }
+
+    &__val {
+        font-weight: 700;
+        @include adaptiv-font(40, 56, 18, 1);
+        white-space: nowrap;
+    }
+
+    &__btn {
+        @media screen and (max-width: 575px) {
+            width: 100%;
+
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// goal ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.goal {
+    @include adaptiv-value("margin-bottom", 64, 40, 1);
+
+    &__wrapper {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
+        border-radius: 10px;
+        color: $White;
+        position: relative;
+        overflow: hidden;
+        padding: 24px;
+        @include adaptiv-value("padding-top", 48, 24, 1);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba($color: $Black, $alpha: 0.1);
+            pointer-events: none;
+        }
+    }
+
+    &__body {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__bonus {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__bonus-val {
+        font-weight: 900;
+        @include adaptiv-font(58, 81, 24, 1);
+    }
+
+    &__bonus-label {
+        color: rgba($color: $White, $alpha: 0.8);
+    }
+
+    &__timer {
+        display: inline-flex;
+        padding: 8px 16px;
+        background: rgba($White, 0.2);
+        border-radius: 10px;
+        gap: 8px;
+        font-weight: 700;
+        @include adaptiv-font(20, 28, 14, 1);
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 40, 24, 1);
+        }
+    }
+
+    &__target-title {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+// experience ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.experience {
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__row {
+        @media screen and (min-width: 992px) {
+            display: flex;
+
+            & > * {
+                &:not(:last-child) {
+                    @include adaptiv-value("margin-right", 40, -40, 1);
+                }
+            }
+        }
+        @media screen and (max-width: 991px) {
+            @include adaptiv-value("padding-top", 32, 24, 0);
+            @include adaptiv-value("padding-bottom", 32, 24, 0);
+            @include adaptiv-value("padding-left", 32, 16, 0);
+            @include adaptiv-value("padding-right", 32, 16, 0);
+            background: $White;
+            box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
+            border-radius: 10px;
+
+            & > * {
+                &:not(:last-child) {
+                    @include adaptiv-value("margin-bottom", 40, 16, 0);
+                }
+            }
+        }
+    }
+
+    &__image {
+        flex-shrink: 0;
+        @include adaptiv-value("flex-basis", 270, 200, 0);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
+
+        @media screen and (max-width: 991px) {
+            position: relative;
+            padding-bottom: 180px;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: left;
+            }
+        }
+    }
+
+    &__body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (min-width: 992px) {
+            @include adaptiv-value("padding-top", 32, 24, 1);
+            @include adaptiv-value("padding-bottom", 32, 24, 1);
+            @include adaptiv-value("padding-left", 32, 16, 1);
+            @include adaptiv-value("padding-right", 32, 16, 1);
+            background: $White;
+            box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
+            border-radius: 10px;
+        }
+    }
+
+    &__body-heading {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 32, 24, 1);
+        }
+
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        @include adaptiv-font(18, 25, 14, 1);
+    }
+
+    &__text {
+        color: $DGrey;
+    }
+
+    &__progress {
+        .progress__title {
+            font-weight: 600;
+        }
+
+        .progress__value {
+            color: $Grey;
+        }
+    }
+
+    &__progress-item {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 32, 24, 1);
+        }
+    }
+}
+
+// structure ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.structure {
+    &__wrapper {
+        @include adaptiv-value("padding-top", 32, 24, 1);
+        @include adaptiv-value("padding-bottom", 32, 24, 1);
+        @include adaptiv-value("padding-left", 32, 16, 1);
+        @include adaptiv-value("padding-right", 32, 16, 1);
+        background: $White;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        border-radius: 10px;
+    }
+
+    &__report {
+        background: #f6f6fb;
+        border-radius: 10px;
+        @include adaptiv-value("padding-top", 32, 24, 1);
+        @include adaptiv-value("padding-bottom", 32, 24, 1);
+        @include adaptiv-value("padding-left", 32, 16, 1);
+        @include adaptiv-value("padding-right", 32, 16, 1);
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px 80px;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__report-item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__report-img {
+        flex-shrink: 0;
+        @include adaptiv-value("flex-basis", 44, 35, 1);
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-right", 16, 8, 1);
+        }
+    }
+
+    &__report-item-body {
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    &__report-item-label {
+        color: $Grey;
+    }
+
+    &__report-item-value {
+        font-weight: 700;
+        @include adaptiv-font(24, 34, 16, 1);
+    }
+
+    &__tree {
+        display: flex;
+        flex-wrap: wrap;
+        @include adaptiv-value("margin", -8, -5, 1);
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 40, 19, 1);
+        }
+    }
+
+    &__node {
+        flex: 0 0 25%;
+        @include adaptiv-value("padding", 8, 5, 1);
+
+        @media screen and (min-width: 1200px) and (max-width: 1920px) {
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    flex: 0 0 33.333%;
+                }
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            flex: 0 0 33.333%;
+        }
+        @media screen and (max-width: 991px) {
+            flex: 0 0 50%;
+        }
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__node-wrapper {
+        padding: 8px;
+        color: $White;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__node-heading {
+        padding-top: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        flex: 1;
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+            @include adaptiv-value("margin-bottom", 32, 16, 1);
+        }
+    }
+
+    &__node-heading-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 5px 10px;
+    }
+
+    &__node-title {
+        font-weight: 700;
+        @include adaptiv-font(24, 34, 16, 1);
+    }
+
+    &__node-percent {
+    }
+
+    &__node-body {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        padding: 16px;
+    }
+
+    &__node-attribute {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 16, 8, 1);
+        }
+    }
+
+    &__node-attribute-label {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: break-all;
+    }
+
+    &__node-attribute-val {
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    &__referrals-item {
+    }
+}
+
+.referral {
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__wrapper {
+        position: relative;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        border-radius: 10px;
+        border: 1px solid #e7e9ed;
+        padding: 8px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    &__count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        flex: 0 0 18px;
+        border-radius: 10px;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        color: $White;
+        margin-right: 8px;
+
+        &--first {
+            background-color: #425ec3;
+        }
+
+        &--second {
+            background-color: #9948d9;
+        }
+
+        &--third {
+            background-color: #ed5a6b;
+        }
+
+        &--fourth {
+            background-color: #5ab8ed;
+        }
+
+        &--fifth {
+            background-color: #3ad16e;
+        }
+
+        &--sixth {
+            background-color: #9dc44b;
+        }
+
+        &--seventh {
+            background-color: #fa9334;
+        }
+    }
+
+    &__inner {
+        @include adaptiv-value("padding-top", 16, 8, 1);
+        @include adaptiv-value("padding-bottom", 16, 8, 1);
+        @include adaptiv-value("padding-left", 16, 0, 1);
+        @include adaptiv-value("padding-right", 16, 8, 1);
+        width: 100%;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: flex-start;
+        row-gap: 16px;
+        @include adaptiv-value("column-gap", 27, 15, 1);
+        flex-wrap: wrap;
+
+        &:not(:last-child) {
+            @include adaptiv-value("padding-bottom", 24, 16, 1);
+            border-bottom: 1px solid $Line;
+        }
+    }
+
+    &__person {
+        display: flex;
+        align-items: flex-start;
+        flex: 0 0 39%;
+        row-gap: 10px;
+        @include adaptiv-value("column-gap", 24, -16, 1);
+
+        @media screen and (max-width: 991px) {
+            flex: 0 0 100%;
+            @include adaptiv-value("column-gap", 24, 16, 0);
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        @include adaptiv-value("flex-basis", 54, 35, 1);
+        border-radius: 100%;
+
+        @media screen and (max-width: 991px) {
+            flex-basis: 54px;
+        }
+        @media screen and (max-width: 767px) {
+            @include adaptiv-value("flex-basis", 54, 45, 0);
+        }
+    }
+
+    a.referral__logo {
+        transition: $transition ease opacity 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__person-body {
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__name {
+        display: inline-flex;
+        font-weight: 600;
+    }
+
+    a.referral__name {
+        color: $fontColor;
+        text-decoration: underline transparent from-font;
+        transition: $transition ease text-decoration 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline $fontColor from-font;
+            }
+        }
+    }
+
+    &__reg {
+        color: $Grey;
+        @include adaptiv-font(12, 17, 10, 1);
+    }
+
+    &__right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        @include adaptiv-value("column-gap", 24, 16, 1);
+    }
+
+    &__qualification {
+        display: flex;
+        font-size: 10px;
+        line-height: 14px;
+
+        & > * {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &__qualification-label {
+        font-weight: 600;
+        padding: 4px 8px;
+        background: #d5dbe4;
+        border-radius: 8px;
+    }
+
+    &__qualification-status {
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: 8px;
+
+        &--gold {
+            background: rgba(255, 206, 69, 0.2);
+            color: #ffce45;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        @include adaptiv-value("column-gap", 24, 8, 1);
+    }
+
+    &__contact {
+        display: inline-flex;
+        align-items: center;
+
+        i {
+            color: $Grey;
+            @include adaptiv-font(24, 24, 20, 1);
+
+            @media (any-hover: hover) {
+                &:hover {
+                    animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                }
+            }
+        }
+
+        span {
+            @include adaptiv-font(13, 18, 12, 1);
+            color: $Blue;
+            text-decoration: underline transparent from-font;
+            text-underline-offset: 1px;
+            transition: $transition ease text-decoration 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline $Blue from-font;
+                }
+            }
+        }
+    }
+
+    &__body {
+        padding-top: 16px;
+        padding-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        row-gap: 15px;
+        @include adaptiv-value("column-gap", 40, 10, 1);
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__attribute {
+        @include adaptiv-font(13, 18, 12, 1);
+    }
+
+    &__attribute-label {
+        color: $Grey;
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__attribute-val {
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    &__toggle {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 17px;
+        color: $fontColor;
+        text-align: center;
+        border: 1px solid transparent;
+        padding: 8px 15px;
+        min-height: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #efeff4;
+        border-radius: 10px;
+        transition: $transition ease all 0s;
+
+        span {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+
+        i {
+            font-size: 7px;
+            transition: $transition ease transform 0s;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $Blue;
+                color: $Blue;
+            }
+        }
+    }
+
+    &--parent {
+        &._active {
+            & > .referral__wrapper {
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+
+                .referral__toggle {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            & > .referral {
+                display: block;
+            }
+        }
+    }
+
+    & > .referral {
+        @include adaptiv-value("margin-left", 10, 5, 1);
+        display: none;
+    }
+}
+
+// seo ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.seo {
+    &__wrapper {
+        background: $White;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        border-radius: 10px;
+        @include adaptiv-value("padding", 32, 16, 1);
+    }
+
+    &__text {
+        max-width: 700px;
+
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    background: url(../img/icons/check3.svg) no-repeat center/cover;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}

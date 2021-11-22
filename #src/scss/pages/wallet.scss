@@ -1,0 +1,254 @@
+// wallet ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.wallet {
+    &__container {
+        display: flex;
+        align-self: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 25px;
+        column-gap: 40px;
+    }
+
+    &__balance {
+        text-align: right;
+    }
+
+    &__balance-label {
+        font-weight: 600;
+        @include adaptiv-font(12, 17, 9, 1);
+        text-transform: uppercase;
+        letter-spacing: calc(12 * 0.08) + px;
+        color: rgba($color: $fontColor, $alpha: 0.7);
+    }
+
+    &__balance-val {
+        font-weight: 700;
+        @include adaptiv-font(30, 42, 20, 1);
+    }
+}
+
+// wallet-transactions ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.wallet-transactions {
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        @include adaptiv-value("margin", -20, 20, 1);
+
+        @media screen and (min-width: 2561px) {
+            max-width: 65%;
+        }
+        @media screen and (max-width: 991px) {
+            @include adaptiv-value("margin", -20, 0, 0);
+        }
+        @media screen and (max-width: 767px) {
+            @include adaptiv-value("margin", -20, -5, 0);
+        }
+        @media screen and (max-width: 450) {
+            margin: -10px 0;
+        }
+    }
+
+    &__card {
+        @include adaptiv-value("padding", 20, -20, 1);
+        flex: 0 0 33.333%;
+
+        @media screen and (max-width: 991px) {
+            flex: 0 0 50%;
+            @include adaptiv-value("padding", 20, 0, 0);
+        }
+        @media screen and (max-width: 767px) {
+            @include adaptiv-value("padding", 20, 5, 0);
+        }
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+            padding: 10px 0;
+        }
+
+        .recent-events {
+            &__item-wrapper {
+                display: flex;
+                flex-direction: column;
+
+                & > * {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+
+            &__item-heading {
+            }
+
+            &__item-theme {
+            }
+
+            &__item-icon {
+            }
+
+            &__item-content {
+                flex: 1;
+                max-width: 200px;
+            }
+
+            &__item-btn {
+                a {
+                    min-height: 44px;
+                    width: 100%;
+                    @include adaptiv-font(14, 20, 12, 1);
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
+            }
+        }
+    }
+}
+
+// operations ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.operations {
+    &__wrapper {
+        background: $White;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        border-radius: 10px;
+        @include adaptiv-value("padding", 32, 16, 1);
+    }
+
+    &__table {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 28, 12, 1);
+        }
+
+        th {
+            @media screen and (max-width: 450px) {
+                display: none;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    &__item {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        @include adaptiv-font(16, 22, 12, 1);
+
+        @media screen and (max-width: 450px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 0px !important;
+        }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    &__title {
+        @media screen and (min-width: 450px) {
+            display: none;
+        }
+        @media screen and (max-width: 450px) {
+            font-weight: 500;
+            @include adaptiv-font(14, 17, 10, 1);
+            color: $Grey;
+            padding-right: 10px;
+        }
+    }
+
+    &__text {
+        @media screen and (max-width: 450px) {
+            text-align: right;
+        }
+    }
+
+    &__sum {
+        white-space: nowrap;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 24px;
+    }
+}
+
+// bank-account ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.bank-account {
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 16px;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 32, 24, 1);
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: 15px;
+        }
+    }
+
+    &__wrapper {
+        background: #ffffff;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        border-radius: 10px;
+        @include adaptiv-value("padding", 32, 16, 1);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 16px;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 24, 16, 1);
+        }
+    }
+
+    &__item-title {
+        display: flex;
+        align-items: center;
+        @include adaptiv-font(16, 22, 12, 1);
+
+        img {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", 16, 8, 1);
+            }
+        }
+    }
+
+    &__notification {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: $Red;
+        @include adaptiv-value("margin-left", 32, 16, 1);
+    }
+
+    &__paid {
+        font-weight: 600;
+        @include adaptiv-font(14, 20, 12, 1);
+        color: $Green;
+        text-align: center;
+        padding: 6px 10px;
+        min-height: 32px;
+        background: rgba(70, 182, 75, 0.16);
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+    }
+}

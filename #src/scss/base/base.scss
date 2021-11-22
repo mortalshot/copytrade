@@ -209,50 +209,16 @@ img {
     height: auto;
 }
 
-// site ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-body {
-    font-family: $fontMain;
-    font-weight: $fontWeight;
-    font-size: #{$fontSize}px;
-    line-height: #{$lineHeight}px;
-    color: $fontColor;
-    overflow-x: hidden;
-
-    @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
-        font-size: calc(#{$fontSizeMobile}px + (#{$fontSize} - #{$fontSizeMobile}) * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-        line-height: calc(#{$lineHeight} / #{$fontSize});
-    }
-
-    &.lock {
-        overflow: hidden;
-    }
+._green {
+    color: #4dc668;
 }
 
-.site {
-    &__wrap {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
-    &__main {
-        padding: $size-header-height 0px 0px 0px;
-
-        @media screen and (max-width: 767px) {
-            padding: $size-header-height-mobile 0px 0px 0px;
-        }
-    }
-
-    &__footer {
-        margin-top: auto;
-    }
+._sBlue {
+    color: #4785e5;
 }
 
-[class*="__container"] {
-    max-width: calc($size-container + $containerPadding * 2) + px;
-    @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 1);
-    @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 1);
-    margin: 0 auto;
+._red {
+    color: $Red;
 }
 
 // buttons ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -263,6 +229,641 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-family: $fontMain;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: $White;
+    padding: 10px 32px;
+    border-radius: 10px;
+
+    &-small {
+        font-size: 12px;
+        line-height: 17px;
+        min-height: 30px;
+        padding: 5px 10px;
+    }
+
+    &-big {
+        @include adaptiv-font(16, 22, 14, 1);
+        min-height: 58px;
+    }
+
+    &-color {
+        background-color: $Blue;
+        color: $White;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.2);
+            pointer-events: none;
+            border-radius: 100%;
+            transition: 0.3s ease all 0s;
+            opacity: 0;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    opacity: 1;
+                    width: 200%;
+                    height: 200%;
+                }
+            }
+        }
+    }
+
+    &-border {
+        border: 1px solid $Blue;
+        color: $fontColor;
+        transition: $transition ease color 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $Blue;
+            }
+        }
+    }
 }
 
 // titles ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+h1 {
+    font-weight: 600;
+    @include adaptiv-font(28, 39, 18, 1);
+    display: flex;
+    align-items: center;
+
+    & > * {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    img {
+        @include adaptiv-value("max-width", 40, 30, 1);
+    }
+}
+
+h2 {
+    font-weight: 700;
+    @include adaptiv-font(24, 34, 16, 1);
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 32, 24, 1);
+    }
+}
+
+h3 {
+    font-weight: 700;
+    @include adaptiv-font(20, 28, 14, 1);
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 24, 16, 1);
+    }
+}
+
+h4 {
+    font-weight: 700;
+    @include adaptiv-font(16, 22, 13, 1);
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 24, 16, 1);
+    }
+}
+// site ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+body {
+    font-family: $fontMain;
+    font-weight: $fontWeight;
+    font-size: #{$fontSize}px;
+    line-height: #{$lineHeight}px;
+    color: $fontColor;
+    background-color: #fbfbfd;
+    overflow-x: hidden;
+
+    @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+        font-size: calc(#{$fontSizeMobile}px + (#{$fontSize} - #{$fontSizeMobile}) * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(#{$lineHeight} / #{$fontSize});
+    }
+
+    &._lock {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0px;
+}
+
+.main {
+    position: relative;
+}
+
+section {
+    @include adaptiv-value("margin-bottom", 64, 40, 1);
+}
+
+.footer {
+    margin-top: auto;
+}
+
+[class*="__container"] {
+    width: 100%;
+    max-width: 100%;
+    @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 0);
+    @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 0);
+    margin: 0 auto;
+}
+
+.table {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th {
+            font-weight: 500;
+            text-align: left;
+            color: $Grey;
+        }
+
+        th,
+        td {
+            &:not(:last-child) {
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+
+    li {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        -webkit-appearance: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #efeff4;
+        cursor: pointer;
+        font-family: $fontMain;
+        font-weight: 600;
+        @include adaptiv-font(14, 20, 12, 1);
+        border-radius: 10px;
+        flex-shrink: 0;
+        @include adaptiv-value(width, 40, 30, 1);
+        @include adaptiv-value(height, 40, 30, 1);
+        @include adaptiv-value(flex-basis, 40, 30, 1);
+        border: 1px solid transparent;
+        transition: $transition ease border-color, $transition color 0s;
+
+        &:not(._active):not(.pagination__more) {
+            @media (any-hover: hover) {
+                &:hover {
+                    border-color: $Blue;
+                    color: $Blue;
+                }
+            }
+        }
+
+        &._active,
+        &.pagination__more {
+            cursor: auto;
+        }
+
+        &._active {
+            background: $Blue;
+            color: $White;
+        }
+    }
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+
+    &__button {
+        flex-shrink: 0;
+        @include adaptiv-value(width, 40, 30, 1);
+        @include adaptiv-value(height, 40, 30, 1);
+        @include adaptiv-value(flex-basis, 40, 30, 1);
+        border-radius: 100%;
+        background: $White;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        font-size: 12px;
+        color: $DGrey;
+        cursor: pointer;
+        pointer-events: all;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        transition: $transition ease transform, $transition opacity 0s;
+
+        &:not(.arrows__button-disabled) {
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: translateY(3px);
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &__button-prev {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__button-next {
+    }
+
+    &__button-disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+._content {
+    p {
+        margin: 20px 0;
+        color: $DGrey;
+    }
+
+    a {
+        color: $fontColor;
+        text-decoration: underline $fontColor from-font;
+        transition: $transition ease text-decoration, $transition opacity 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.6;
+                text-decoration: underline transparent from-font;
+            }
+        }
+    }
+
+    ul {
+        li {
+            color: $DGrey;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    :first-child {
+        margin-top: 0;
+    }
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tooltip {
+    position: relative;
+
+    &__btn {
+        font-size: 16px;
+        color: $Grey;
+        padding: 5px;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        transition: $transition ease color 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $Blue;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                & + .tooltip__content {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                    top: -8px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        background: rgba(40, 44, 51, 0.9);
+        border-radius: 10px;
+        padding: 16px;
+        font-size: 12px;
+        line-height: 17px;
+        color: $White;
+        position: absolute;
+        right: 0;
+        top: -16px;
+        z-index: 2;
+        transform: translate(100%, -100%);
+        visibility: hidden;
+        pointer-events: none;
+        opacity: 0;
+        transition: $transition ease all 0s;
+
+        p,
+        ul li {
+            color: $White;
+        }
+    }
+
+    &._active {
+        .tooltip__content {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            top: -8px;
+        }
+    }
+}
+
+.video {
+    box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($color: #494f6f, $alpha: 0.3);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    &__wrapper {
+        @include adaptiv-value("min-height", 500, 350, 0);
+        position: relative;
+        @include adaptiv-value("padding-top", 96, 48, 1);
+        @include adaptiv-value("padding-bottom", 40, 24, 1);
+        @include adaptiv-value("padding-left", 40, 16, 1);
+        @include adaptiv-value("padding-right", 40, 16, 1);
+        color: $White;
+        text-align: center;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .video__play {
+                    border-color: $White;
+
+                    i {
+                        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        position: relative;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 96, 80, 1);
+        }
+    }
+
+    &__title-main {
+        @include adaptiv-font(74, 104, 32, 1);
+    }
+
+    &__title-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include adaptiv-font(146, 146, 50, 1);
+        color: rgba($color: $White, $alpha: 0.1);
+    }
+
+    &__play {
+        font-weight: 600;
+        @include adaptiv-font(16, 22, 14, 1);
+        white-space: nowrap;
+        color: $White;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        padding: 16px 24px;
+        border: 1px solid transparent;
+        transition: $transition ease border-color 0s;
+
+        i {
+            @include adaptiv-font(18, 18, 16, 1);
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-right", 16, 8, 1);
+            }
+        }
+    }
+
+    &__warning,
+    &__congratulation {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        // box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        z-index: 2;
+
+        img {
+            max-width: 24px;
+            margin-right: 8px;
+        }
+    }
+
+    &__warning {
+        background: #f8a830;
+        padding: 8px;
+        text-align: left;
+    }
+
+    &__congratulation {
+        @include adaptiv-font(16, 22, 12, 1);
+        background: url(../img/icons/congratulation.jpg) no-repeat center/cover;
+        padding: 18px 40px;
+    }
+
+    &--lock {
+        &::before {
+            background: rgba($color: #494f6f, $alpha: 0.7);
+        }
+    }
+}
+
+// swiper ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.swiper {
+    &__buttons {
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    &__button {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        border-radius: 100%;
+        background: $White;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        font-size: 12px;
+        color: $DGrey;
+        cursor: pointer;
+        pointer-events: all;
+        box-shadow: 4px 4px 10px rgba(29, 29, 80, 0.05);
+        transition: $transition ease transform, $transition opacity 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: translateY(3px);
+            }
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        &.swiper-button-lock {
+            display: none;
+        }
+    }
+
+    &__button-prev {
+        transform: rotate(180deg);
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: translateY(3px) rotate(180deg);
+            }
+        }
+
+        &.swiper-button-disabled {
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: translateY(0) rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &._init {
+        .swiper__buttons {
+            opacity: 1;
+        }
+    }
+}
+
+._arrow-top {
+    .swiper {
+        &__title {
+            padding-top: 3px;
+            margin-right: 100px;
+            position: relative;
+            z-index: 2;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__buttons {
+            position: absolute;
+            top: 10px;
+            justify-content: flex-end;
+            transition: $transition ease opacity 0s;
+
+            @media screen and (max-width: 575px) {
+                display: none;
+            }
+        }
+
+        &__button {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+
+        &-wrapper {
+            padding-top: 72px;
+            @include adaptiv-value("margin-top", -40, -32, 1);
+
+            @media screen and (max-width: 575px) {
+                margin-top: 0;
+                padding-top: 16px;
+            }
+        }
+    }
+}

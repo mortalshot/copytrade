@@ -4,13 +4,13 @@
     @if $type==1 {
         // Если меньше контейнера
         #{$property}: $startSize + px;
-        @media (max-width: #{$size-container + px}) {
+        @media (max-width: #{$sizeContainer + px}) {
             #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
         }
     } @else if $type==2 {
         // Если больше контейнера
         #{$property}: $minSize + px;
-        @media (min-width: #{$size-container + px}) {
+        @media (min-width: #{$sizeContainer + px}) {
             #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
         }
     } @else {
@@ -26,12 +26,12 @@
         font-size: $pcSize + px;
         line-height: $lineHeight + px;
 
-        @media (max-width: #{$size-container + px}) {
+        @media (max-width: #{$sizeContainer + px}) {
             font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
-            line-height: $lineHeight / $pcSize * 100%;
+            line-height: math.div($lineHeight, $pcSize) * 100%;
         }
     } @else {
         font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$layoutMobile + px}) / (#{$layoutDesktop - $layoutMobile})));
-        line-height: $lineHeight / $pcSize * 100%;
+        line-height: math.div($lineHeight, $pcSize) * 100%;
     }
 }

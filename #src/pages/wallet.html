@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../html-components/_head.html',{
+"title":"Кошелёк"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('../html-components/sidebar.html',{})
+
+        <div class="content">
+            @@include('../html-components/header.html',{})
+
+            <main class="main">
+                <section class="wallet">
+                    <div class="wallet__container">
+                        <h1 class="wallet__title">
+                            <img src="../img/icons/wallet.svg" alt="Кошелёк" loading="lazy">
+                            <span>Кошелёк</span>
+                        </h1>
+
+                        <div class="wallet__balance">
+                            <div class="wallet__balance-label">Баланс</div>
+                            <div class="wallet__balance-val">189 239,91 $</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="wallet-transactions">
+                    <div class="wallet-transactions__container">
+                        <h2 class="wallet-transactions__title">Операции</h2>
+
+                        <div class="wallet-transactions__cards">
+                            <div class="wallet-transactions__card recent-events__item">
+                                <div class="recent-events__item-wrapper">
+                                    <div class="recent-events__item-heading">
+                                        <div class="recent-events__item-theme">Вывод</div>
+                                        <div class="recent-events__item-icon"><img src="../img/icons/money-send.svg" alt="Вывод" loading="lazy"></div>
+                                    </div>
+
+                                    <div class="recent-events__item-content _content">
+                                        <p>Деньги порступят на ваш кошелёк в течении 24 самов!</p>
+                                    </div>
+
+                                    <div class="recent-events__item-btn"><a href="" class="btn btn-color">Вывод средств</a></div>
+                                </div>
+                            </div>
+                            <div class="wallet-transactions__card recent-events__item">
+                                <div class="recent-events__item-wrapper">
+                                    <div class="recent-events__item-heading">
+                                        <div class="recent-events__item-theme">Пополнение</div>
+                                        <div class="recent-events__item-icon"><img src="../img/icons/money-recive.svg" alt="Пополнение" loading="lazy"></div>
+                                    </div>
+
+                                    <div class="recent-events__item-content _content">
+                                        <p>Пополняйте счёт для бла бла бла тебольшой текст</p>
+                                    </div>
+
+                                    <div class="recent-events__item-btn"><a href="" class="btn btn-color">Пополнить</a></div>
+                                </div>
+                            </div>
+                            <div class="wallet-transactions__card recent-events__item">
+                                <div class="recent-events__item-wrapper">
+                                    <div class="recent-events__item-heading">
+                                        <div class="recent-events__item-theme">Перевод</div>
+                                        <div class="recent-events__item-icon"><img src="../img/icons/money-send2.svg" alt="Перевод" loading="lazy"></div>
+                                    </div>
+
+                                    <div class="recent-events__item-content _content">
+                                        <p>Переводите деньги клиентам по логину, ID или почте</p>
+                                    </div>
+
+                                    <div class="recent-events__item-btn"><a href="" class="btn btn-color">Перевести</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="operations">
+                    <div class="operations__container">
+                        <h2>История операций</h2>
+
+                        <div class="operations__wrapper">
+                            <div class="operations__table table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Дата</th>
+                                            <th>Операция</th>
+                                            <th>Сумма</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Дата</div>
+                                                <div class="operations__text">22.08.2021</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Операция</div>
+                                                <div class="operations__text">Вывод на свой кошелёк</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Сумма</div>
+                                                <div class="operations__text operations__sum _red">— 4 000 $</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Дата</div>
+                                                <div class="operations__text">22.08.2021</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Операция</div>
+                                                <div class="operations__text">Перевод пользователю sergyhar*****</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Сумма</div>
+                                                <div class="operations__text operations__sum _red">— 400 $</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Дата</div>
+                                                <div class="operations__text">22.08.2021</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Операция</div>
+                                                <div class="operations__text">Пополнение</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Сумма</div>
+                                                <div class="operations__text operations__sum _green">+ 18 000 $</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Дата</div>
+                                                <div class="operations__text">22.08.2021</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Операция</div>
+                                                <div class="operations__text">Перевод пользователю sergyhar*****</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Сумма</div>
+                                                <div class="operations__text operations__sum _red">— 4 000 $</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Дата</div>
+                                                <div class="operations__text">22.08.2021</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Операция</div>
+                                                <div class="operations__text">Пополнение</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Сумма</div>
+                                                <div class="operations__text operations__sum _green">+ 9 000 $</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Дата</div>
+                                                <div class="operations__text">22.08.2021</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Операция</div>
+                                                <div class="operations__text">Перевод пользователю sergyhar*****</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Сумма</div>
+                                                <div class="operations__text operations__sum _red">— 100 $</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Дата</div>
+                                                <div class="operations__text">22.08.2021</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Операция</div>
+                                                <div class="operations__text">Вывод на свой кошелёк</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Сумма</div>
+                                                <div class="operations__text operations__sum _red">— 100 $</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Дата</div>
+                                                <div class="operations__text">22.08.2021</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Операция</div>
+                                                <div class="operations__text">Пополнение</div>
+                                            </td>
+                                            <td class="operations__item">
+                                                <div class="operations__title">Сумма</div>
+                                                <div class="operations__text operations__sum _green">+ 34 000 $</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="operations__navigation">
+                                <ul class="operations__pagination pagination">
+                                    <li><button class="pagination__item _active">1</button></li>
+                                    <li><button class="pagination__item">2</button></li>
+                                    <li><button class="pagination__item">3</button></li>
+                                    <li><span class="pagination__item pagination__more">...</span></li>
+                                    <li><button class="pagination__item">23</button></li>
+                                    <li><button class="pagination__item">24</button></li>
+                                </ul>
+
+                                <div class="arrows">
+                                    <div class="arrows__button arrows__button-prev arrows__button-disabled"><i class="icon-slider-arrow"></i></div>
+                                    <div class="arrows__button arrows__button-next"><i class="icon-slider-arrow"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bank-account">
+                    <div class="bank-account__container">
+                        <div class="bank-account__heading">
+                            <h2 class="bank-account__title">Мои счета</h2>
+
+                            <div class="bank-account__filter filter">
+                                <button type="button" class="filter__btn">
+                                    <span>Все</span>
+                
+                                    <i class="icon-accordion-chevron"></i>
+                                </button>
+                
+                                <div class="filter__triggers">
+                                    <a href="" class="filter__trigger _active">Все</a>
+                                    <a href="" class="filter__trigger">Не оплаченные</a>
+                                    <a href="" class="filter__trigger">Оплаченные</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bank-account__wrapper">
+                            <div class="bank-account__item">
+                                <div class="bank-account__item-title">
+                                    <img src="../img/icons/dollar.svg" alt="Счёт на оплату от 15.03.2021" loading="lazy">
+                                    <span>Счёт на оплату от 15.03.2021</span>
+                                    <span class="bank-account__notification"></span>
+                                </div>
+                                <div class="bank-account__action">
+                                    <a href="" class="bank-account__btn btn btn-small btn-border">Оплатить</a>
+                                </div>
+                            </div>
+                            <div class="bank-account__item">
+                                <div class="bank-account__item-title">
+                                    <img src="../img/icons/dollar.svg" alt="Счёт на оплату от 15.03.2021" loading="lazy">
+                                    <span>Счёт на оплату от 15.03.2021</span>
+                                </div>
+                                <div class="bank-account__action">
+                                    <div class="bank-account__paid">Оплачен</div>
+                                </div>
+                            </div>
+                            <div class="bank-account__item">
+                                <div class="bank-account__item-title">
+                                    <img src="../img/icons/dollar.svg" alt="Счёт на оплату от 15.03.2021" loading="lazy">
+                                    <span>Счёт на оплату от 15.03.2021</span>
+                                </div>
+                                <div class="bank-account__action">
+                                    <div class="bank-account__paid">Оплачен</div>
+                                </div>
+                            </div>
+                            <div class="bank-account__item">
+                                <div class="bank-account__item-title">
+                                    <img src="../img/icons/dollar.svg" alt="Счёт на оплату от 15.03.2021" loading="lazy">
+                                    <span>Счёт на оплату от 15.03.2021</span>
+                                </div>
+                                <div class="bank-account__action">
+                                    <div class="bank-account__paid">Оплачен</div>
+                                </div>
+                            </div>
+                            <div class="bank-account__item">
+                                <div class="bank-account__item-title">
+                                    <img src="../img/icons/dollar.svg" alt="Счёт на оплату от 15.03.2021" loading="lazy">
+                                    <span>Счёт на оплату от 15.03.2021</span>
+                                </div>
+                                <div class="bank-account__action">
+                                    <div class="bank-account__paid">Оплачен</div>
+                                </div>
+                            </div>
+                            <div class="bank-account__item">
+                                <div class="bank-account__item-title">
+                                    <img src="../img/icons/dollar.svg" alt="Счёт на оплату от 15.03.2021" loading="lazy">
+                                    <span>Счёт на оплату от 15.03.2021</span>
+                                </div>
+                                <div class="bank-account__action">
+                                    <div class="bank-account__paid">Оплачен</div>
+                                </div>
+                            </div>
+                            <div class="bank-account__item">
+                                <div class="bank-account__item-title">
+                                    <img src="../img/icons/dollar.svg" alt="Счёт на оплату от 15.03.2021" loading="lazy">
+                                    <span>Счёт на оплату от 15.03.2021</span>
+                                </div>
+                                <div class="bank-account__action">
+                                    <div class="bank-account__paid">Оплачен</div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    @@include('../html-components/_popup.html',{})
+    @@include('../html-components/_js.html',{})
+</body>
+
+</html>

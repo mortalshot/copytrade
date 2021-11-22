@@ -1,0 +1,120 @@
+.filter {
+    position: relative;
+
+    &__triggers {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            border-radius: 10px;
+            background: $White;
+            box-shadow: 4px 4px 34px rgba(0, 0, 0, 0.15);
+            display: block;
+            position: absolute;
+            z-index: 3;
+            right: 0;
+            bottom: 0;
+            transform: translateY(100%);
+            padding: 8px;
+            min-width: 136px;
+            opacity: 0;
+            transition: $transition ease opacity, $transition bottom 0s;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @media screen and (max-width: 767px) {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 8px 8px 10px;
+            border-radius: 10px;
+            background: transparent;
+            border: 1px solid $Line;
+            font-weight: 600;
+            @include adaptiv-font(12, 17, 10, 1);
+            transition: $transition ease all 0s;
+
+            span {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+
+            i {
+                font-size: 6px;
+                transition: $transition ease transform 0s;
+            }
+        }
+    }
+
+    &__trigger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 16px;
+        background-color: #efeff4;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 17px;
+        color: $DGrey;
+        border: 1px solid transparent;
+        transition: $transition ease color, $transition border-color 0s;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+            padding: 6px 8px;
+            background-color: transparent;
+            text-align: left;
+            color: $fontColor;
+            margin: 0;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $Blue;
+                color: $Blue;
+            }
+        }
+
+        &:not(:last-child) {
+            @media screen and (min-width: 768px) {
+                margin-right: 8px;
+            }
+        }
+
+        &._active {
+            &::before {
+                display: none;
+            }
+
+            @media screen and (min-width: 768px) {
+                background-color: $Blue;
+                color: $White;
+                cursor: auto;
+            }
+        }
+    }
+
+    &._active {
+        @media screen and (max-width: 767px) {
+            .filter__btn {
+                border-color: $Blue;
+                color: $Blue;
+
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .filter__triggers {
+                bottom: -8px;
+                opacity: 1;
+            }
+        }
+    }
+}

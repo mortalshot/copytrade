@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../html-components/_head.html',{
+"title":"Главная страница"
+})
+
+<body>
+    <!-- Add "_hide-sidebar" class to hide sidebar -->
+    <div class="wrapper">
+        @@include('../html-components/sidebar.html',{})
+
+        <div class="content">
+            @@include('../html-components/header.html',{
+            "isBalance": true,
+            })
+
+            <main class="main">
+                <section class="recent-events">
+                    <div class="recent-events__container">
+                        <div class="recent-events__swiper _arrow-top">
+                            <h2 class="swiper__title recent-events__title">Последние события</h2>
+
+                            <div class="swiper">
+                                <div class="swiper__buttons">
+                                    <div class="swiper__button swiper__button-prev"><i class="icon-slider-arrow"></i></div>
+                                    <div class="swiper__button swiper__button-next"><i class="icon-slider-arrow"></i></div>
+                                </div>
+
+                                <div class="swiper-wrapper">
+                                    <div class="recent-events__item swiper-slide">
+                                        <div class="recent-events__item-wrapper">
+                                            <div class="recent-events__item-heading">
+                                                <div class="recent-events__item-theme">ПАРТНЁРство</div>
+                                                <div class="recent-events__item-icon"><img src="../img/icons/partnership.svg" alt="ПАРТНЁРство" loading="lazy"></div>
+                                            </div>
+
+                                            <h4 class="recent-events__item-title">У вас новый реферал</h4>
+
+                                            <div class="recent-events__item-content _content">
+                                                <p>Поздравляем, пользователь <a href="#">nameuser@gmail.com</a> стал вашим новым партнёром!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recent-events__item swiper-slide">
+                                        <div class="recent-events__item-wrapper">
+                                            <div class="recent-events__item-heading">
+                                                <div class="recent-events__item-theme">Профиль</div>
+                                                <div class="recent-events__item-icon"><img src="../img/icons/mail.svg" alt="Профиль" loading="lazy"></div>
+                                            </div>
+
+                                            <h4 class="recent-events__item-title">Подтвердите почту</h4>
+
+                                            <div class="recent-events__item-content _content">
+                                                <p>Чтобы пользоваться всеми возможностями платформы</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recent-events__item swiper-slide">
+                                        <div class="recent-events__item-wrapper">
+                                            <div class="recent-events__item-heading">
+                                                <div class="recent-events__item-theme">Бонус</div>
+                                                <div class="recent-events__item-icon"><img src="../img/icons/gift.svg" alt="Бонус" loading="lazy"></div>
+                                            </div>
+
+                                            <h4 class="recent-events__item-title">Получите 1 000 $</h4>
+
+                                            <div class="recent-events__item-content _content">
+                                                <p>Выполните все условия и получите бонус быстрого старта</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recent-events__item swiper-slide">
+                                        <div class="recent-events__item-wrapper">
+                                            <div class="recent-events__item-heading">
+                                                <div class="recent-events__item-theme">ПАРТНЁРство</div>
+                                                <div class="recent-events__item-icon"><img src="../img/icons/partnership.svg" alt="ПАРТНЁРство" loading="lazy"></div>
+                                            </div>
+
+                                            <h4 class="recent-events__item-title">У вас новый реферал</h4>
+
+                                            <div class="recent-events__item-content _content">
+                                                <p>Поздравляем, пользователь <a href="#">nameuser@gmail.com</a> стал вашим новым партнёром!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recent-events__item swiper-slide">
+                                        <div class="recent-events__item-wrapper">
+                                            <div class="recent-events__item-heading">
+                                                <div class="recent-events__item-theme">Профиль</div>
+                                                <div class="recent-events__item-icon"><img src="../img/icons/mail.svg" alt="Профиль" loading="lazy"></div>
+                                            </div>
+
+                                            <h4 class="recent-events__item-title">Подтвердите почту</h4>
+
+                                            <div class="recent-events__item-content _content">
+                                                <p>Чтобы пользоваться всеми возможностями платформы</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recent-events__item swiper-slide">
+                                        <div class="recent-events__item-wrapper">
+                                            <div class="recent-events__item-heading">
+                                                <div class="recent-events__item-theme">Бонус</div>
+                                                <div class="recent-events__item-icon"><img src="../img/icons/gift.svg" alt="Бонус" loading="lazy"></div>
+                                            </div>
+
+                                            <h4 class="recent-events__item-title">Получите 1 000 $</h4>
+
+                                            <div class="recent-events__item-content _content">
+                                                <p>Выполните все условия и получите бонус быстрого старта</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                @@include('../html-components/profitability.html',{})
+
+                <div class="trip-banner">
+                    <div class="trip-banner__container">
+                        <div class="trip-banner__wrapper" style="background-image: url(../img/banners/fly-banner.jpg);">
+                            <div class="trip-banner__body">
+                                <div class="trip-banner__timer timer">
+                                    <span class="timer__days"><span>25</span> д</span>
+                                    <span class="timer__hours"><span>12</span> ч</span>
+                                    <span class="timer__minutes"><span>30</span> м</span>
+                                    <span class="timer__seconds"><span>25</span> с</span>
+                                </div>
+                                <div class="trip-banner__label">Осталось до поездки</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('../html-components/activity-report.html',{})
+
+
+                <section class="qualification">
+                    <div class="qualification__container">
+                        <h2 class="qualification__title">До следующей квалификации</h2>
+
+                        <div class="qualification__items">
+                            <div class="qualification__item">
+                                <div class="qualification__item-wrapper">
+                                    <div class="qualification__item-top">
+                                        <a href="" class="qualification__item-title">Товарооборот структуры</a>
+                                        <div class="qualification__item-goal">2 120 $ / 5 000 $</div>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div class="progress__bg">
+                                            <div class="progress__line" style="width: 42.4%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qualification__item">
+                                <div class="qualification__item-wrapper">
+                                    <div class="qualification__item-top">
+                                        <a href="" class="qualification__item-title">Активных партнёров</a>
+                                        <div class="qualification__item-goal">0 / 45</div>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div class="progress__bg">
+                                            <div class="progress__line" style="width: 0%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qualification__item">
+                                <div class="qualification__item-wrapper">
+                                    <div class="qualification__item-top">
+                                        <a href="" class="qualification__item-title">Первый уровень</a>
+                                        <div class="qualification__item-goal">2 / 3</div>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div class="progress__bg">
+                                            <div class="progress__line" style="width: 66.666%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qualification__item">
+                                <div class="qualification__item-wrapper">
+                                    <div class="qualification__item-top">
+                                        <a href="" class="qualification__item-title">Структура</a>
+                                        <div class="qualification__item-goal">0 / 45</div>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div class="progress__bg">
+                                            <div class="progress__line" style="width: 0%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qualification__item qualification__item--complete">
+                                <div class="qualification__item-wrapper">
+                                    <div class="qualification__item-top">
+                                        <div class="qualification__item-title">Лицензия Silver</div>
+                                    </div>
+
+                                    <div class="qualification__item-check">
+                                        <img src="../img/icons/check.svg" alt="Выполнено" loading="lazy">
+                                        <span>Выполнено</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+    </div>
+
+    @@include('../html-components/_popup.html',{})
+    @@include('../html-components/_js.html',{})
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../html-components/_head.html',{
+"title":"Promo"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('../html-components/sidebar.html',{})
+
+        <div class="content">
+            @@include('../html-components/header.html',{})
+
+            <main class="main">
+                <section class="promo">
+                    <div class="promo__container">
+                        <h1 class="promo__title">
+                            <img src="../img/icons/achievements.svg" alt="Promo" loading="lazy">
+                            <span>Promo</span>
+                        </h1>
+                        <div class="promo__video video video--lock" style="background-image: url('../img/banners/promo-california.jpg');">
+                            <a href="" class="video__wrapper">
+                                <div class="video__title">
+                                    <div class="video__title-main">California</div>
+                                    <div class="video__title-bg">California</div>
+                                </div>
+
+                                <div class="video__play">
+                                    <i class="icon-play"></i>
+                                    <span>Смотреть видео</span>
+                                </div>
+
+                                <div class="video__warning">
+                                    <img src="../img/icons/alert.svg" alt="У вас не выполнены условия для этой поездки. Поторопитесь!" loading="lazy">
+                                    <span>У вас не выполнены условия для этой поездки. Поторопитесь!</span>
+                                </div>
+                                <div class="video__congratulation" style="display: none;">Поздравляем. Вы выполнили все условия</div>
+                            </a>
+                        </div>
+
+                        <div class="trip-banner">
+                            <div class="trip-banner__wrapper" style="background-image: url(../img/banners/promo-california2.svg);">
+                                <div class="trip-banner__body">
+                                    <div class="trip-banner__timer timer">
+                                        <span class="timer__days"><span>25</span> д</span>
+                                        <span class="timer__hours"><span>12</span> ч</span>
+                                        <span class="timer__minutes"><span>30</span> м</span>
+                                        <span class="timer__seconds"><span>25</span> с</span>
+                                    </div>
+                                    <div class="trip-banner__label">Осталось до поездки</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                @@include('../html-components/experience.html',{
+                "title": "Условия"
+                })
+
+                <section class="past-trips">
+                    <div class="past-trips__container">
+                        <h2 class="past-trips__title">Прошедшие поездки</h2>
+                        <div class="past-trips__wrapper">
+                            <a href="" class="past-trips__item">
+                                <img src="../img/banners/new-york.jpg" alt="" loading="lazy">
+                                <div class="past-trips__city">New York</div>
+                                <div class="past-trips__date">Поездка окончена <span>18.09.2020</span></div>
+                            </a>
+                            <div class="past-trips__item" style="background-image: url(../img/banners/dubai.jpg);">
+                                <div class="past-trips__city">New York</div>
+                                <div class="past-trips__date">Поездка окончена <span>18.09.2020</span></div>
+                            </div>
+                            <div class="past-trips__item" style="background-image: url(../img/banners/thailand.jpg);">
+                                <div class="past-trips__city">Thailand</div>
+                                <div class="past-trips__date">Поездка окончена <span>14.03.2020</span></div>
+                            </div>
+                            <div class="past-trips__item" style="background-image: url(../img/banners/greece.jpg);">
+                                <div class="past-trips__city">Greece</div>
+                                <div class="past-trips__date">Поездка окончена <span>126.04.2019</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    @@include('../html-components/_popup.html',{})
+    @@include('../html-components/_js.html',{})
+</body>
+
+</html>

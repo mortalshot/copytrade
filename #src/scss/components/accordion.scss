@@ -1,12 +1,80 @@
 .accordion {
-    // .accordion__title
-    &__title {
-        position: relative;
-        cursor: pointer;
-        background-color: transparent;
+    &__item {
+        &._active {
+            .accordion__button {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .accordion__toggler {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .accordion__text {
+                display: block;
+            }
+        }
     }
 
-    // .accordion__text
+    &__button {
+        &::after {
+            content: "\e919";
+            font-family: "icomoon" !important;
+            font-size: 6px;
+            color: $DGrey;
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            border-radius: 100%;
+            background: #eff2f8;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            transition: $transition ease transform 0s;
+        }
+
+        &--empty {
+            cursor: auto;
+            
+            &::after {
+                display: none;
+            }
+
+            .accordion__toggler {
+                display: none;
+            }
+        }
+    }
+
     &__text {
+        display: none;
+    }
+
+    &__toggler {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 12px;
+        line-height: 17px;
+        color: $Blue;
+
+        i {
+            font-size: 6px;
+            color: $DGrey;
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            border-radius: 100%;
+            background: #eff2f8;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: $transition ease transform 0s;
+        }
     }
 }

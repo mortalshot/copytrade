@@ -1,31 +1,48 @@
-// $('.gallery__main').slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     fade: true,
-//     asNavFor: '.gallery__thumbnails',
-// });
-// $('.gallery__thumbnails').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     asNavFor: '.gallery__main',
-//     arrows: false,
-//     focusOnSelect: true,
-//     vertical: true,
-//     verticalSwiping: true,
+const eventsSlider = document.querySelectorAll('.recent-events__swiper .swiper');
 
-//     responsive: [
-//         {
-//           breakpoint: 991,
-//           settings: {
-//             vertical: false,
-//             verticalSwiping: false,
-//           }
-//         },
-//       ]
-// });
+if (eventsSlider.length > 0) {
+    new Swiper('.recent-events__swiper .swiper', {
+        slidesPerView: 1.5,
+        spaceBetween: 15,
+        watchOverflow: true,
 
-// $('#productGallery .tabs-triggers__item').click(function() {
-//     $('.gallery__main').slick('refresh');
-//     $('.gallery__thumbnails').slick('refresh');
-// })
+        navigation: {
+            prevEl: '.recent-events__swiper .swiper__button-prev',
+            nextEl: '.recent-events__swiper .swiper__button-next',
+        },
+
+        on: {
+            lock: function () {
+                this.el.classList.add('_lock');
+            },
+
+            init: function() {
+                this.el.classList.add('_init');
+            }
+        },
+
+        breakpoints: {
+            450: {
+                slidesPerView: 2,
+            },
+            576: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            1920: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            2560: {
+                slidesPerView: 5,
+                spaceBetween: 40,
+            },
+        },
+    })
+}

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../html-components/_head.html',{
+"title":"Партнёрство"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('../html-components/sidebar.html',{})
+
+        <div class="content">
+            @@include('../html-components/header.html',{
+            "isBalance": false,
+            })
+
+            <main class="main">
+                <section class="partner">
+                    <div class="partner__container">
+                        <div class="partner__heading">
+                            <h1 class="partner__title">
+                                <img src="../img/icons/team2.svg" alt="Партнёрство" loading="lazy">
+                                <span>Партнёрство</span>
+                            </h1>
+
+                            <div class="partner__rank partner__rank--light" style="background-image: url(../img/icons/rank-light.jpg);"> Лицензия <b>LIGHT</b> </div>
+                        </div>
+
+                        <div class="withdrawal">
+                            <div class="withdrawal__wrapper">
+                                <div class="withdrawal__left">
+                                    <div class="withdrawal__label">Текущий Баланс</div>
+                                    <div class="withdrawal__val">189 239,91 $</div>
+                                </div>
+                                <div class="withdrawal__btn"><a href="" class="btn btn-color btn-big">Вывести на внутренний кошелёк</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="goal">
+                    <div class="goal__container">
+                        <div class="goal__wrapper" style="background-image: url(../img/banners/goal-banner.jpg);">
+                            <div class="goal__body">
+                                <div class="goal__bonus">
+                                    <div class="goal__bonus-val">1&nbsp;200&nbsp;$</div>
+                                    <div class="goal__bonus-label">Бонус быстрого старта</div>
+                                </div>
+
+                                <div class="goal__timer timer">
+                                    <span class="timer__days"><span>14</span> д:</span>
+                                    <span class="timer__hours"><span>8</span> ч:</span>
+                                    <span class="timer__minutes"><span>29</span> м:</span>
+                                    <span class="timer__seconds"><span>37</span> с</span>
+                                </div>
+
+                                <div class="goal__target">
+                                    <div class="goal__target-title">Пригласить 3 человека. <br>
+                                        Они должны совершить хотя бы одну покупку</div>
+
+                                    <div class="progress">
+                                        <div class="progress__bg">
+                                            <div class="progress__line" style="width: 33.333%;"></div>
+                                        </div>
+                                        <div class="progress__title">1/3</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('../html-components/experience.html',{
+                "title": "Квалификация"
+                })
+
+                @@include('../html-components/profitability.html',{})
+
+                @@include('../html-components/activity-report.html',{})
+
+                <section class="structure">
+                    <div class="structure__container">
+                        <h2 class="structure__title">Структура</h2>
+
+                        <div class="structure__wrapper">
+                            <div class="structure__report">
+                                <div class="structure__report-item">
+                                    <div class="structure__report-img"><img src="../img/icons/team3.svg" alt="Всего в команде" loading="lazy"></div>
+                                    <div class="structure__report-item-body">
+                                        <div class="structure__report-item-label">Всего в команде</div>
+                                        <div class="structure__report-item-value">1&nbsp;298 человек</div>
+                                    </div>
+                                </div>
+                                <div class="structure__report-item">
+                                    <div class="structure__report-img"><img src="../img/icons/product.svg" alt="Товарооборот" loading="lazy"></div>
+                                    <div class="structure__report-item-body">
+                                        <div class="structure__report-item-label">Товарооборот</div>
+                                        <div class="structure__report-item-value">8&nbsp;971&nbsp;425,63&nbsp;$</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="structure__tree">
+                                <div class="structure__node">
+                                    <div class="structure__node-wrapper" style="background-color: #425EC4;">
+                                        <div class="structure__node-heading">
+                                            <div class="structure__node-heading-row">
+                                                <div class="structure__node-title">1 линия</div>
+                                                <div class="structure__node-percent">20%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="structure__node-body">
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Партнёров</div>
+                                                <div class="structure__node-attribute-val">2</div>
+                                            </div>
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Товарооборот</div>
+                                                <div class="structure__node-attribute-val">2 981,21 $</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="structure__node">
+                                    <div class="structure__node-wrapper" style="background-color:#9948D9;">
+                                        <div class="structure__node-heading">
+                                            <div class="structure__node-heading-row">
+                                                <div class="structure__node-title">2 линия</div>
+                                                <div class="structure__node-percent">10%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="structure__node-body">
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Партнёров</div>
+                                                <div class="structure__node-attribute-val">11</div>
+                                            </div>
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Товарооборот</div>
+                                                <div class="structure__node-attribute-val">17 981,21 $</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="structure__node">
+                                    <div class="structure__node-wrapper" style="background-color:#ED5A6B;">
+                                        <div class="structure__node-heading">
+                                            <div class="structure__node-heading-row">
+                                                <div class="structure__node-title">3 линия</div>
+                                                <div class="structure__node-percent">5%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="structure__node-body">
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Партнёров</div>
+                                                <div class="structure__node-attribute-val">819</div>
+                                            </div>
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Товарооборот</div>
+                                                <div class="structure__node-attribute-val">1 983 452,11 $</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="structure__node">
+                                    <div class="structure__node-wrapper" style="background-color:#5AB8ED;">
+                                        <div class="structure__node-heading">
+                                            <div class="structure__node-heading-row">
+                                                <div class="structure__node-title">4 линия</div>
+                                                <div class="structure__node-percent">20%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="structure__node-body">
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Партнёров</div>
+                                                <div class="structure__node-attribute-val">2</div>
+                                            </div>
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Товарооборот</div>
+                                                <div class="structure__node-attribute-val">2 981,21 $</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="structure__node">
+                                    <div class="structure__node-wrapper" style="background-color:#3AD16E;">
+                                        <div class="structure__node-heading">
+                                            <div class="structure__node-heading-row">
+                                                <div class="structure__node-title">5 линия</div>
+                                                <div class="structure__node-percent">20%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="structure__node-body">
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Партнёров</div>
+                                                <div class="structure__node-attribute-val">2</div>
+                                            </div>
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Товарооборот</div>
+                                                <div class="structure__node-attribute-val">2 981,21 $</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="structure__node">
+                                    <div class="structure__node-wrapper" style="background-color:#9DC34B;">
+                                        <div class="structure__node-heading">
+                                            <div class="structure__node-heading-row">
+                                                <div class="structure__node-title">6 линия</div>
+                                                <div class="structure__node-percent">20%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="structure__node-body">
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Партнёров</div>
+                                                <div class="structure__node-attribute-val">2</div>
+                                            </div>
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Товарооборот</div>
+                                                <div class="structure__node-attribute-val">2 981,21 $</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="structure__node">
+                                    <div class="structure__node-wrapper" style="background-color:#FA9334;">
+                                        <div class="structure__node-heading">
+                                            <div class="structure__node-heading-row">
+                                                <div class="structure__node-title">7 линия</div>
+                                                <div class="structure__node-percent">20%</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="structure__node-body">
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Партнёров</div>
+                                                <div class="structure__node-attribute-val">2</div>
+                                            </div>
+                                            <div class="structure__node-attribute">
+                                                <div class="structure__node-attribute-label">Товарооборот</div>
+                                                <div class="structure__node-attribute-val">2 981,21 $</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="structure__referrals">
+                                <h3 class="structure__referrals-title">Структура партнёров</h3>
+
+                                <div class="structure__referrals-item referral referral--parent _active">
+                                    <div class="referral__wrapper">
+                                        <div class="referral__count referral__count--first">1</div>
+
+                                        <div class="referral__inner">
+                                            <div class="referral__heading">
+                                                <div class="referral__person">
+                                                    <a href="" class="referral__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                                    <div class="referral__person-body">
+                                                        <a href="" class="referral__name">Миронов Андрей Павлович</a>
+                                                        <div class="referral__reg">Дата регистрации 29.01.2019</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="referral__right">
+                                                    <div class="referral__qualification">
+                                                        <div class="referral__qualification-label">Квалификация</div>
+                                                        <div class="referral__qualification-status referral__qualification-status--gold">GOLD</div>
+                                                    </div>
+
+                                                    <div class="referral__contacts">
+                                                        <a href="tel:+79155555555" class="referral__contact"><i class="icon-phone"></i></a>
+                                                        <a href="mailto:qwerty@mail.ru" class="referral__contact"><i class="icon-mail"></i></a>
+                                                        <a href="#purchaseHistory" class="referral__contact popup-link"><span>История покупок</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="referral__body">
+                                                <div class="referral__attribute">
+                                                    <div class="referral__attribute-label">Товарооборот</div>
+                                                    <div class="referral__attribute-val">4 235,87 $</div>
+                                                </div>
+                                                <div class="referral__attribute">
+                                                    <div class="referral__attribute-label">Партнёров</div>
+                                                    <div class="referral__attribute-val">183</div>
+                                                </div>
+                                                <div class="referral__attribute">
+                                                    <div class="referral__attribute-label">Окончание лицензии</div>
+                                                    <div class="referral__attribute-val">28.02.2022</div>
+                                                </div>
+                                                <div class="referral__attribute">
+                                                    <div class="referral__attribute-label">ID</div>
+                                                    <div class="referral__attribute-val">id8274712718</div>
+                                                </div>
+                                            </div>
+
+                                            <a href="" class="referral__toggle">
+                                                <span>Партнёры</span>
+                                                <i class="icon-accordion-chevron"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="structure__referrals-item referral">
+                                        <div class="referral__wrapper">
+                                            <div class="referral__count referral__count--second">2</div>
+
+                                            <div class="referral__inner">
+                                                <div class="referral__heading">
+                                                    <div class="referral__person">
+                                                        <a href="" class="referral__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                                        <div class="referral__person-body">
+                                                            <a href="" class="referral__name">Миронов Андрей Павлович</a>
+                                                            <div class="referral__reg">Дата регистрации 29.01.2019</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="referral__right">
+                                                        <div class="referral__qualification">
+                                                            <div class="referral__qualification-label">Квалификация</div>
+                                                            <div class="referral__qualification-status referral__qualification-status--gold">GOLD</div>
+                                                        </div>
+
+                                                        <div class="referral__contacts">
+                                                            <a href="#purchaseHistory" class="referral__contact popup-link"><span>История покупок</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="referral__body">
+                                                    <div class="referral__attribute">
+                                                        <div class="referral__attribute-label">Товарооборот</div>
+                                                        <div class="referral__attribute-val">4 235,87 $</div>
+                                                    </div>
+                                                    <div class="referral__attribute">
+                                                        <div class="referral__attribute-label">Партнёров</div>
+                                                        <div class="referral__attribute-val">183</div>
+                                                    </div>
+                                                    <div class="referral__attribute">
+                                                        <div class="referral__attribute-label">Окончание лицензии</div>
+                                                        <div class="referral__attribute-val">28.02.2022</div>
+                                                    </div>
+                                                    <div class="referral__attribute">
+                                                        <div class="referral__attribute-label">ID</div>
+                                                        <div class="referral__attribute-val">id8274712718</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="structure__referrals-item referral referral--parent _active">
+                                        <div class="referral__wrapper">
+                                            <div class="referral__count referral__count--second">2</div>
+
+                                            <div class="referral__inner">
+                                                <div class="referral__heading">
+                                                    <div class="referral__person">
+                                                        <a href="" class="referral__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                                        <div class="referral__person-body">
+                                                            <a href="" class="referral__name">Миронов Андрей Павлович</a>
+                                                            <div class="referral__reg">Дата регистрации 29.01.2019</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="referral__right">
+                                                        <div class="referral__qualification">
+                                                            <div class="referral__qualification-label">Квалификация</div>
+                                                            <div class="referral__qualification-status referral__qualification-status--gold">GOLD</div>
+                                                        </div>
+
+                                                        <div class="referral__contacts">
+                                                            <a href="#purchaseHistory" class="referral__contact popup-link"><span>История покупок</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="referral__body">
+                                                    <div class="referral__attribute">
+                                                        <div class="referral__attribute-label">Товарооборот</div>
+                                                        <div class="referral__attribute-val">4 235,87 $</div>
+                                                    </div>
+                                                    <div class="referral__attribute">
+                                                        <div class="referral__attribute-label">Партнёров</div>
+                                                        <div class="referral__attribute-val">183</div>
+                                                    </div>
+                                                    <div class="referral__attribute">
+                                                        <div class="referral__attribute-label">Окончание лицензии</div>
+                                                        <div class="referral__attribute-val">28.02.2022</div>
+                                                    </div>
+                                                    <div class="referral__attribute">
+                                                        <div class="referral__attribute-label">ID</div>
+                                                        <div class="referral__attribute-val">id8274712718</div>
+                                                    </div>
+                                                </div>
+
+                                                <a href="" class="referral__toggle">
+                                                    <span>Партнёры</span>
+                                                    <i class="icon-accordion-chevron"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="structure__referrals-item referral referral--parent _active">
+                                            <div class="referral__wrapper">
+                                                <div class="referral__count referral__count--third">3</div>
+
+                                                <div class="referral__inner">
+                                                    <div class="referral__heading">
+                                                        <div class="referral__person">
+                                                            <a href="" class="referral__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                                            <div class="referral__person-body">
+                                                                <a href="" class="referral__name">Миронов Андрей Павлович</a>
+                                                                <div class="referral__reg">Дата регистрации 29.01.2019</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="referral__right">
+                                                            <div class="referral__qualification">
+                                                                <div class="referral__qualification-label">Квалификация</div>
+                                                                <div class="referral__qualification-status referral__qualification-status--gold">GOLD</div>
+                                                            </div>
+
+                                                            <div class="referral__contacts">
+                                                                <a href="#purchaseHistory" class="referral__contact popup-link"><span>История покупок</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="referral__body">
+                                                        <div class="referral__attribute">
+                                                            <div class="referral__attribute-label">Товарооборот</div>
+                                                            <div class="referral__attribute-val">4 235,87 $</div>
+                                                        </div>
+                                                        <div class="referral__attribute">
+                                                            <div class="referral__attribute-label">Партнёров</div>
+                                                            <div class="referral__attribute-val">183</div>
+                                                        </div>
+                                                        <div class="referral__attribute">
+                                                            <div class="referral__attribute-label">Окончание лицензии</div>
+                                                            <div class="referral__attribute-val">28.02.2022</div>
+                                                        </div>
+                                                        <div class="referral__attribute">
+                                                            <div class="referral__attribute-label">ID</div>
+                                                            <div class="referral__attribute-val">id8274712718</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <a href="" class="referral__toggle">
+                                                        <span>Партнёры</span>
+                                                        <i class="icon-accordion-chevron"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="structure__referrals-item referral referral--parent _active">
+                                                <div class="referral__wrapper">
+                                                    <div class="referral__count referral__count--fourth">4</div>
+
+                                                    <div class="referral__inner">
+                                                        <div class="referral__heading">
+                                                            <div class="referral__person">
+                                                                <a href="" class="referral__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                                                <div class="referral__person-body">
+                                                                    <a href="" class="referral__name">Миронов Андрей Павлович</a>
+                                                                    <div class="referral__reg">Дата регистрации 29.01.2019</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="referral__right">
+                                                                <div class="referral__qualification">
+                                                                    <div class="referral__qualification-label">Квалификация</div>
+                                                                    <div class="referral__qualification-status referral__qualification-status--gold">GOLD</div>
+                                                                </div>
+
+                                                                <div class="referral__contacts">
+                                                                    <a href="#purchaseHistory" class="referral__contact popup-link"><span>История покупок</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="referral__body">
+                                                            <div class="referral__attribute">
+                                                                <div class="referral__attribute-label">Товарооборот</div>
+                                                                <div class="referral__attribute-val">4 235,87 $</div>
+                                                            </div>
+                                                            <div class="referral__attribute">
+                                                                <div class="referral__attribute-label">Партнёров</div>
+                                                                <div class="referral__attribute-val">183</div>
+                                                            </div>
+                                                            <div class="referral__attribute">
+                                                                <div class="referral__attribute-label">Окончание лицензии</div>
+                                                                <div class="referral__attribute-val">28.02.2022</div>
+                                                            </div>
+                                                            <div class="referral__attribute">
+                                                                <div class="referral__attribute-label">ID</div>
+                                                                <div class="referral__attribute-val">id8274712718</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a href="" class="referral__toggle">
+                                                            <span>Партнёры</span>
+                                                            <i class="icon-accordion-chevron"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="structure__referrals-item referral referral--parent _active">
+                                                    <div class="referral__wrapper">
+                                                        <div class="referral__count referral__count--fifth">5</div>
+
+                                                        <div class="referral__inner">
+                                                            <div class="referral__heading">
+                                                                <div class="referral__person">
+                                                                    <a href="" class="referral__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                                                    <div class="referral__person-body">
+                                                                        <a href="" class="referral__name">Миронов Андрей Павлович</a>
+                                                                        <div class="referral__reg">Дата регистрации 29.01.2019</div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="referral__right">
+                                                                    <div class="referral__qualification">
+                                                                        <div class="referral__qualification-label">Квалификация</div>
+                                                                        <div class="referral__qualification-status referral__qualification-status--gold">GOLD</div>
+                                                                    </div>
+
+                                                                    <div class="referral__contacts">
+                                                                        <a href="#purchaseHistory" class="referral__contact popup-link"><span>История покупок</span></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="referral__body">
+                                                                <div class="referral__attribute">
+                                                                    <div class="referral__attribute-label">Товарооборот</div>
+                                                                    <div class="referral__attribute-val">4 235,87 $</div>
+                                                                </div>
+                                                                <div class="referral__attribute">
+                                                                    <div class="referral__attribute-label">Партнёров</div>
+                                                                    <div class="referral__attribute-val">183</div>
+                                                                </div>
+                                                                <div class="referral__attribute">
+                                                                    <div class="referral__attribute-label">Окончание лицензии</div>
+                                                                    <div class="referral__attribute-val">28.02.2022</div>
+                                                                </div>
+                                                                <div class="referral__attribute">
+                                                                    <div class="referral__attribute-label">ID</div>
+                                                                    <div class="referral__attribute-val">id8274712718</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <a href="" class="referral__toggle">
+                                                                <span>Партнёры</span>
+                                                                <i class="icon-accordion-chevron"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="structure__referrals-item referral referral--parent _active">
+                                                        <div class="referral__wrapper">
+                                                            <div class="referral__count referral__count--sixth">6</div>
+
+                                                            <div class="referral__inner">
+                                                                <div class="referral__heading">
+                                                                    <div class="referral__person">
+                                                                        <a href="" class="referral__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                                                        <div class="referral__person-body">
+                                                                            <a href="" class="referral__name">Миронов Андрей Павлович</a>
+                                                                            <div class="referral__reg">Дата регистрации 29.01.2019</div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="referral__right">
+                                                                        <div class="referral__qualification">
+                                                                            <div class="referral__qualification-label">Квалификация</div>
+                                                                            <div class="referral__qualification-status referral__qualification-status--gold">GOLD</div>
+                                                                        </div>
+
+                                                                        <div class="referral__contacts">
+                                                                            <a href="#purchaseHistory" class="referral__contact popup-link"><span>История покупок</span></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="referral__body">
+                                                                    <div class="referral__attribute">
+                                                                        <div class="referral__attribute-label">Товарооборот</div>
+                                                                        <div class="referral__attribute-val">4 235,87 $</div>
+                                                                    </div>
+                                                                    <div class="referral__attribute">
+                                                                        <div class="referral__attribute-label">Партнёров</div>
+                                                                        <div class="referral__attribute-val">183</div>
+                                                                    </div>
+                                                                    <div class="referral__attribute">
+                                                                        <div class="referral__attribute-label">Окончание лицензии</div>
+                                                                        <div class="referral__attribute-val">28.02.2022</div>
+                                                                    </div>
+                                                                    <div class="referral__attribute">
+                                                                        <div class="referral__attribute-label">ID</div>
+                                                                        <div class="referral__attribute-val">id8274712718</div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <a href="" class="referral__toggle">
+                                                                    <span>Партнёры</span>
+                                                                    <i class="icon-accordion-chevron"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="structure__referrals-item referral">
+                                                            <div class="referral__wrapper">
+                                                                <div class="referral__count referral__count--seventh">7</div>
+
+                                                                <div class="referral__inner">
+                                                                    <div class="referral__heading">
+                                                                        <div class="referral__person">
+                                                                            <a href="" class="referral__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                                                            <div class="referral__person-body">
+                                                                                <a href="" class="referral__name">Миронов Андрей Павлович</a>
+                                                                                <div class="referral__reg">Дата регистрации 29.01.2019</div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="referral__right">
+                                                                            <div class="referral__qualification">
+                                                                                <div class="referral__qualification-label">Квалификация</div>
+                                                                                <div class="referral__qualification-status referral__qualification-status--gold">GOLD</div>
+                                                                            </div>
+
+                                                                            <div class="referral__contacts">
+                                                                                <a href="tel:+79155555555" class="referral__contact"><i class="icon-phone"></i></a>
+                                                                                <a href="mailto:qwerty@mail.ru" class="referral__contact"><i class="icon-mail"></i></a>
+                                                                                <a href="#purchaseHistory" class="referral__contact popup-link"><span>История покупок</span></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="referral__body">
+                                                                        <div class="referral__attribute">
+                                                                            <div class="referral__attribute-label">Товарооборот</div>
+                                                                            <div class="referral__attribute-val">4 235,87 $</div>
+                                                                        </div>
+                                                                        <div class="referral__attribute">
+                                                                            <div class="referral__attribute-label">Партнёров</div>
+                                                                            <div class="referral__attribute-val">183</div>
+                                                                        </div>
+                                                                        <div class="referral__attribute">
+                                                                            <div class="referral__attribute-label">Окончание лицензии</div>
+                                                                            <div class="referral__attribute-val">28.02.2022</div>
+                                                                        </div>
+                                                                        <div class="referral__attribute">
+                                                                            <div class="referral__attribute-label">ID</div>
+                                                                            <div class="referral__attribute-val">id8274712718</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="seo">
+                    <div class="seo__container">
+                        <h2 class="seo__title">Информация</h2>
+
+                        <div class="seo__wrapper">
+                            <div class="seo__text _content">
+                                <h4>Почему всё так хорошо работает и как это исправить?</h4>
+
+                                <p>Равным образом дальнейшее развитие различных форм деятельности требуют от нас анализа систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров влечёт за собой процесс внедрения и модернизации направлений прогрессивного развития. </p>
+
+                                <p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации дальнейших направлений развития. Равным образом дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке модели развития.</p>
+
+                                <br>
+
+                                <h4>Почему всё так хорошо работает и как это исправить?</h4>
+
+                                <ul>
+                                    <li>Равным образом дальнейшее развитие различных форм деятельности требуют от</li>
+                                    <li>Равным образом дальнейшее развитие</li>
+                                    <li>Равным образом дальнейшее развитие различных форм деятельности требуют от</li>
+                                    <li>Равным образом дальнейшее развитие</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    @@include('../html-components/_popup.html',{})
+    @@include('../html-components/_js.html',{})
+</body>
+
+</html>

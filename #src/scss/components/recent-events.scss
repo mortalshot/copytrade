@@ -1,0 +1,103 @@
+.recent-events {
+    &:first-child {
+        @media screen and (min-width: 768px) {
+            padding-top: 25px;
+        }
+    }
+
+    &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 44, 20, 1);
+    }
+
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__swiper {
+        overflow: hidden;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: -7px;
+
+        @media screen and (max-width: 450px) {
+            @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 0);
+            @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 0);
+            @include adaptiv-value("margin-left", -$containerPadding, -$containerPaddingMobile, 0);
+            @include adaptiv-value("margin-right", -$containerPadding, -$containerPaddingMobile, 0);
+        }
+
+        .swiper {
+            overflow: visible;
+
+            &._init {
+                .recent-events__item {
+                    flex-basis: initial;
+                }
+            }
+        }
+    }
+
+    &__item {
+        flex: 0 0 33.333%;
+        height: auto;
+    }
+
+    &__item-wrapper {
+        height: 100%;
+        border-radius: 10px;
+        background-color: $White;
+        box-shadow: 4px 7px 15px rgba(29, 29, 80, 0.08);
+        @include adaptiv-value("padding", 24, 16, 1);
+    }
+
+    &__item-heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20;
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 24, 16, 1);
+        }
+    }
+
+    &__item-theme {
+        font-weight: 600;
+        @include adaptiv-font(10, 14, 9, 1);
+        color: $Grey;
+        text-transform: uppercase;
+        @include adaptiv-value("letter-spacing", 1, 0.9, 1);
+    }
+
+    &__item-icon {
+        flex-shrink: 0;
+        @include adaptiv-value("flex-basis", 32, 24, 1);
+    }
+
+    &__item-title {
+        font-weight: 600;
+        @include adaptiv-font(16, 22, 12, 1);
+
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 16, 8, 1);
+        }
+    }
+
+    &__item-content {
+        @include adaptiv-font(12, 17, 10, 1);
+        color: $DGrey;
+
+        a {
+            color: $DGrey;
+            text-decoration: underline $DGrey from-font;
+        }
+    }
+
+    & + .profitability {
+    }
+}

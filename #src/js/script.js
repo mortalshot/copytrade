@@ -1,3 +1,3 @@
-$(document).ready(function () {
-    @@include('index.js')
+document.addEventListener('DOMContentLoaded', function () {
+    @@include('index.js');
 })
