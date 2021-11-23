@@ -749,6 +749,132 @@ section {
     }
 }
 
+.custom-select {
+    position: relative;
+
+    &__link {
+        background: $White;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 8px 16px;
+        color: $fontColor;
+        min-width: 200px;
+        border: 1px solid transparent;
+        transition: $transition ease border-color 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $Blue;
+            }
+        }
+
+        span {
+            font-weight: 600;
+        }
+        i {
+            font-size: 7px;
+            transition: $transition ease transform 0s;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        background: $White;
+        padding: 24px;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        border-radius: 10px;
+        transform: translateY(0px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        transition: $transition ease all 0s;
+        z-index: 3;
+    }
+
+    &__item {
+        cursor: pointer;
+        font-weight: 600;
+        padding-left: 26px;
+        position: relative;
+        transition: $transition ease color 0s;
+
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::before {
+            left: 0;
+            width: 18px;
+            height: 18px;
+            flex: 0 0 18px;
+            border: 1px solid $Grey;
+            border-radius: 6px;
+            transition: $transition ease border-color 0s;
+        }
+        &::after {
+            width: 10px;
+            height: 10px;
+            flex: 0 0 10px;
+            background: $Blue;
+            border-radius: 3px;
+            left: 4px;
+            opacity: 0;
+            transition: $transition ease opacity 0s;
+        }
+
+        @media (any-hover: hover) {
+            &:not(._active) {
+                &:hover {
+                    color: $Blue;
+
+                    &::before {
+                        border-color: $Blue;
+                    }
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        &._active {
+            &::before {
+                border-color: $Blue;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &._active {
+        .custom-select {
+            &__link {
+                border-color: $Blue;
+
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &__list {
+                transform: translateY(8px);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+    }
+}
 // swiper ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .swiper {
     &__buttons {

@@ -97,6 +97,19 @@ function documentActions(e) {
         }
     }
     // ACCORDION ACTION END
+
+    // ACCORDION ACTION START
+    if (document.querySelector('.custom-select')) {
+        if (targetElement.classList.contains('custom-select__link') || targetElement.closest('.custom-select__link')) {
+            e.preventDefault();
+            targetElement.closest('.custom-select').classList.toggle('_active');
+        } else if (targetElement.closest('.custom-select__list')) {
+            targetElement.closest('.custom-select').classList.add('_active');
+        } else {
+            document.querySelector('.custom-select').classList.remove('_active');
+        }
+    }
+    // ACCORDION ACTION END
 }
 const eventsSlider = document.querySelectorAll('.recent-events__swiper .swiper');
 
