@@ -1,64 +1,190 @@
-// !Popup
-.popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(11, 11, 11, 0.8);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 6;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transition: 0.8s ease all 0s;
-
-    &.open {
-        opacity: 1;
-        visibility: visible;
-
-        .popup__content {
-            transform: perspective(600px) translate(0, 0) rotateX(0deg);
-            opacity: 1;
+// fancybox ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.fancybox {
+    &__container {
+        @media (max-width: $mobileSmall) {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
-    &__body {
-        min-height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px 10px;
-
-        @media screen and (max-width: 450px) {
-            padding: 30px 0;
-        }
+    &__backdrop {
+        background: rgba(32, 38, 53, 0.25);
     }
 
     &__content {
-        // background: $card-color;
-        color: #fff;
-        padding: 60px 40px 64px;
-        width: 100%;
-        max-width: 950px;
-        position: relative;
-        opacity: 0;
-        transform: translate(0, -100%);
-        transition: 0.8s ease all 0s;
+        border-radius: 25px;
 
-        @media screen and (max-width: 767px) {
-            padding: 25px 10px 60px;
+        & > .carousel__button.is-close {
+            top: 20px;
+            right: 20px;
+            color: $Grey;
+            box-shadow: none;
+            width: 24px;
+            height: 24px;
+            background: transparent;
         }
     }
 
-    &__close {
-        position: absolute;
-        top: 25px;
-        right: 27px;
+    &__iframe {
+        border-radius: 25px;
+    }
+}
 
-        @media screen and (max-width: 767px) {
-            top: 15px;
-            right: 7px;
+// popup ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.popup {
+    display: none;
+    width: 100%;
+    max-width: 382px;
+    border-radius: 10px;
+    @include adaptiv-value("padding", 40, 16, 1);
+
+    &__content {
+        & > * {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 32, 24, 1);
+            }
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        text-align: center;
+        color: #282c33;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    .form__item {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 24, 16, 1);
+        }
+    }
+
+    &__link {
+        text-align: center;
+
+        a {
+            font-weight: 600;
+            @include adaptiv-font(14, 20, 12, 1);
+            color: $Blue;
+            text-decoration: underline transparent from-font;
+            text-underline-offset: 3px;
+            transition: $transition ease text-decoration 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline $Blue from-font;
+                }
+            }
+        }
+    }
+
+    &_license {
+        .popup {
+            &__content {
+                & > * {
+                    &:not(:last-child) {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    &_broker-connect {
+        .popup__title {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &_strategy {
+        max-width: 596px;
+
+        .popup {
+            &__title {
+                text-align: left;
+                color: $fontColor;
+
+                &:not(:last-child) {
+                    @include adaptiv-value("margin-bottom", 40, 24, 1);
+                }
+            }
+        }
+
+        .form {
+            &__item {
+                &:not(:last-child) {
+                    @include adaptiv-value("margin-bottom", 40, 24, 1);
+                }
+            }
+
+            &__label {
+                color: $fontColor;
+                @include adaptiv-value("margin-bottom", 16, 8, 1);
+                @include adaptiv-font(14, 20, 12, 1);
+            }
+
+            &__input {
+                @include adaptiv-font(14, 20, 12, 1);
+            }
+
+            &__input-descr {
+                @include adaptiv-font(14, 20, 12, 1);
+            }
+
+            textarea.form__input {
+                @include adaptiv-value("min-height", 156, 120, 1);
+            }
+
+            &__submit {
+                @media (min-width: $mobileSmall) {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    &_purchase {
+        max-width: 667px;
+
+        .popup__title {
+            text-align: left;
+
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 32, 24, 1);
+            }
+        }
+
+        .activity-report {
+            &__partner-logo {
+                flex: 0 0 40px;
+                height: 40px;
+            }
+
+            &__partner-name {
+                font-weight: 600;
+            }
+        }
+
+        .operations__table {
+            th,
+            td {
+                &:not(:first-child) {
+                    text-align: right;
+                }
+            }
         }
     }
 }

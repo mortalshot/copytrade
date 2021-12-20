@@ -24,3 +24,68 @@
         transform: rotate(2deg);
     }
 }
+
+@keyframes shake-bottom-center {
+    0%,
+    100% {
+        transform: rotate(0deg) translateY(-50%);
+        transform-origin: 50% 100%;
+    }
+    10% {
+        transform: rotate(2deg) translateY(-50%);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg) translateY(-50%);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg) translateY(-50%);
+    }
+    80% {
+        transform: rotate(-2deg) translateY(-50%);
+    }
+    90% {
+        transform: rotate(2deg) translateY(-50%);
+    }
+}
+
+@keyframes shake-bottom-rotate {
+    0%,
+    100% {
+        transform: rotate(180deg);
+    }
+    10% {
+        transform: rotate(178deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(184deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(176deg);
+    }
+    80% {
+        transform: rotate(182deg);
+    }
+    90% {
+        transform: rotate(178deg);
+    }
+}
+
+@keyframes ping-center {
+    0% {
+        background: rgba($color: $White, $alpha: 0.5);
+    }
+    50% {
+        background: rgba($color: $White, $alpha: 0.35);
+    }
+    100% {
+        background: rgba($color: $White, $alpha: 0.5);
+    }
+}

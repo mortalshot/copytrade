@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../html-components/_head.html',{
+"title":"Лицензии"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('../html-components/sidebar.html',{})
+
+        <div class="content">
+            @@include('../html-components/header.html',{})
+
+            <main class="main">
+                <section class="licenses">
+                    <div class="licenses__container">
+                        <div class="licenses__heading">
+                            <h1 class="licenses__title">
+                                <img src="../img/icons/licenses.svg" alt="Лицензии" loading="lazy">
+                                <span>Лицензии</span>
+                            </h1>
+
+                            <div class="licenses__filter filter">
+                                <button type="button" class="filter__btn">
+                                    <span>Все</span>
+                
+                                    <i class="icon-accordion-chevron"></i>
+                                </button>
+                
+                                <div class="filter__triggers">
+                                    <a href="#licenses-tab-1" class="filter__trigger tabs__trigger _active">Forex</a>
+                                    <a href="#licenses-tab-2" class="filter__trigger tabs__trigger">Crypto</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="licenses__body">
+                            <div id="licenses-tab-1" class="licenses__content tabs__content _active">
+                                <div class="licenses__items">
+                                    <div class="licenses__item license-card">
+                                        <div class="license-card__wrapper">
+                                            <div class="license-card__heading _discount" style="background-image: url(../img/banners/license-1.svg);">
+                                                <div class="license-card__title">LIGHT</div>
+        
+                                                <div class="license-card__price">
+                                                    <span class="license-card__price-current">150</span>
+                                                    <span class="license-card__price-full">300</span>
+                                                </div>
+        
+                                                <div class="license-card__timer timer">
+                                                    <span class="timer__days"><span>42</span> д</span>
+                                                    <span class="timer__hours"><span>12</span> ч</span>
+                                                    <span class="timer__minutes"><span>39</span> м</span>
+                                                    <span class="timer__seconds"><span>56</span> с</span>
+                                                </div>
+                                            </div>
+        
+                                            <div class="license-card__body">
+                                                <ul>
+                                                    <li>Копи тред</li>
+                                                    <li>Партнёрская программа <br>
+                                                        — линейный бонус</li>
+                                                    <li>Партнёрская программа Брокера 7 уровней <br>
+                                                        — линейный бонус <br>
+                                                        — линейный бонус</li>
+                                                </ul>
+                                            </div>
+        
+                                            <div class="license-card__footer">
+                                                <div class="license-card__btn"><a data-src="#license-purchased" class="btn btn-big btn-border" data-fancybox>Куплена</a></div>
+                                                <div class="license-card__time">Лицензия будет действовать до 28.05.2021</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="licenses__item license-card">
+                                        <div class="license-card__wrapper">
+                                            <div class="license-card__heading" style="background-image: url(../img/banners/license-2.svg);">
+                                                <div class="license-card__title">silver</div>
+        
+                                                <div class="license-card__price">
+                                                    <span class="license-card__price-full">1000</span>
+                                                </div>
+                                            </div>
+        
+                                            <div class="license-card__body">
+                                                <ul>
+                                                    <li>Копи тред</li>
+                                                    <li>Партнёрская программа <br>
+                                                        — линейный бонус</li>
+                                                    <li>Партнёрская программа Брокера 7 уровней <br>
+                                                        — линейный бонус <br>
+                                                        — линейный бонус</li>
+                                                    <li>Лидерские квалификации</li>
+                                                </ul>
+                                            </div>
+        
+                                            <div class="license-card__footer">
+                                                <div class="license-card__btn"><a data-src="#invoice-payment" class="btn btn-big btn-color" data-fancybox>Купить</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="licenses__item license-card">
+                                        <div class="license-card__wrapper">
+                                            <div class="license-card__heading _discount" style="background-image: url(../img/banners/license-3.svg);">
+                                                <div class="license-card__title">gold</div>
+        
+                                                <div class="license-card__price">
+                                                    <span class="license-card__price-current">1000</span>
+                                                    <span class="license-card__price-full">2000</span>
+                                                </div>
+        
+                                                <div class="license-card__timer timer">
+                                                    <span class="timer__days"><span>42</span> д</span>
+                                                    <span class="timer__hours"><span>12</span> ч</span>
+                                                    <span class="timer__minutes"><span>39</span> м</span>
+                                                    <span class="timer__seconds"><span>56</span> с</span>
+                                                </div>
+                                            </div>
+        
+                                            <div class="license-card__body">
+                                                <ul>
+                                                    <li>Копи тред</li>
+                                                    <li>Партнёрская программа <br>
+                                                        — линейный бонус</li>
+                                                    <li>Партнёрская программа Брокера 7 уровней <br>
+                                                        — линейный бонус <br>
+                                                        — линейный бонус</li>
+                                                    <li>Приоритетное информирование о новых продуктах</li>
+                                                    <li>Личный менеджер</li>
+                                                    <li>Квалификация «EXPERT» на месяц</li>
+                                                </ul>
+                                            </div>
+        
+                                            <div class="license-card__footer">
+                                                <div class="license-card__btn"><a data-src="#invoice-payment" class="btn btn-big btn-color" data-fancybox>Купить</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="licenses__item license-card">
+                                        <div class="license-card__wrapper">
+                                            <div class="license-card__heading" style="background-image: url(../img/banners/license-2.svg);">
+                                                <div class="license-card__title">silver</div>
+        
+                                                <div class="license-card__price">
+                                                    <span class="license-card__price-full">1000</span>
+                                                </div>
+                                            </div>
+        
+                                            <div class="license-card__body">
+                                                <ul>
+                                                    <li>Копи тред</li>
+                                                    <li>Партнёрская программа <br>
+                                                        — линейный бонус</li>
+                                                    <li>Партнёрская программа Брокера 7 уровней <br>
+                                                        — линейный бонус <br>
+                                                        — линейный бонус</li>
+                                                    <li>Лидерские квалификации</li>
+                                                </ul>
+                                            </div>
+        
+                                            <div class="license-card__footer">
+                                                <div class="license-card__btn"><a data-src="#invoice-payment" class="btn btn-big btn-color" data-fancybox>Купить</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="licenses__item license-card">
+                                        <div class="license-card__wrapper">
+                                            <div class="license-card__heading _discount" style="background-image: url(../img/banners/license-3.svg);">
+                                                <div class="license-card__title">gold</div>
+        
+                                                <div class="license-card__price">
+                                                    <span class="license-card__price-current">1000</span>
+                                                    <span class="license-card__price-full">2000</span>
+                                                </div>
+        
+                                                <div class="license-card__timer timer">
+                                                    <span class="timer__days"><span>42</span> д</span>
+                                                    <span class="timer__hours"><span>12</span> ч</span>
+                                                    <span class="timer__minutes"><span>39</span> м</span>
+                                                    <span class="timer__seconds"><span>56</span> с</span>
+                                                </div>
+                                            </div>
+        
+                                            <div class="license-card__body">
+                                                <ul>
+                                                    <li>Копи тред</li>
+                                                    <li>Партнёрская программа <br>
+                                                        — линейный бонус</li>
+                                                    <li>Партнёрская программа Брокера 7 уровней <br>
+                                                        — линейный бонус <br>
+                                                        — линейный бонус</li>
+                                                    <li>Приоритетное информирование о новых продуктах</li>
+                                                    <li>Личный менеджер</li>
+                                                    <li>Квалификация «EXPERT» на месяц</li>
+                                                </ul>
+                                            </div>
+        
+                                            <div class="license-card__footer">
+                                                <div class="license-card__btn"><a data-src="#invoice-payment" class="btn btn-big btn-color" data-fancybox>Купить</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    @@include('../html-components/_popup.html',{})
+    @@include('../html-components/_js.html',{})
+</body>
+
+</html>

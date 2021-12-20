@@ -5,18 +5,54 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
+
 
 <body>
 	<nav class="header__menu">
+		<h2>Страницы: </h2>
 		<ul class="header__list">
 			<li class="header__item"><a href="pages/main.html" class="header__link">Главная</a></li>
 			<li class="header__item"><a href="pages/partner.html" class="header__link">Партнёрство</a></li>
 			<li class="header__item"><a href="pages/wallet.html" class="header__link">Кошелёк</a></li>
 			<li class="header__item"><a href="pages/promo.html" class="header__link">Promo</a></li>
 			<li class="header__item"><a href="pages/documents.html" class="header__link">Документы</a></li>
+			<li class="header__item"><a href="pages/licenses.html" class="header__link">Лицензии</a></li>
+			<li class="header__item"><a href="pages/settings.html" class="header__link">Настройки</a></li>
+			<li class="header__item"><a href="pages/faq.html" class="header__link">Вопросы и ответы</a></li>
+			<li class="header__item"><a href="pages/single.html" class="header__link">Маркетинговый план</a></li>
+			<li class="header__item"><a href="pages/copytrade.html" class="header__link">Copytrade</a></li>
+			<li class="header__item"><a href="pages/copytrade-single.html" class="header__link">Страница стратегии</a></li>
+		</ul>
+
+		<br>
+		<br>
+
+		<h2>Модальные окна: </h2>
+		<ul class="header__list">
+			<li class="header__item"><a href="" data-src="#withdrawal" class="header__link" data-fancybox>Вывод средств</a></li>
+			<li class="header__item"><a href="" data-src="#replenishment" class="header__link" data-fancybox>Пополнение кошелька</a></li>
+			<li class="header__item"><a href="" data-src="#transfer-internal" class="header__link" data-fancybox>Перевод на внутренний кошелёк</a></li>
+			<li class="header__item"><a href="" data-src="#invoice-payment" class="header__link" data-fancybox>Новый счёт на оплату</a></li>
+			<li class="header__item"><a href="" data-src="#license-purchased" class="header__link" data-fancybox>Лицензия куплена!</a></li>
+			<li class="header__item"><a href="" data-src="#broker-connect" class="header__link" data-fancybox>Вы точно хотите подключиться к брокеру?</a></li>
+			<li class="header__item"><a href="" data-src="#confirm-operation" class="header__link" data-fancybox>Подтвердить операцию?</a></li>
+			<li class="header__item"><a href="" data-src="#keys" class="header__link" data-fancybox>API and Secret keys</a></li>
+			<li class="header__item"><a href="" data-src="#confirm-mail" class="header__link" data-fancybox>Подтвердите почту</a></li>
+			<li class="header__item"><a href="" data-src="#confirm-mail2" class="header__link" data-fancybox>Подтвердите почту</a></li>
+			<li class="header__item"><a href="" data-src="#successfully-joined" class="header__link" data-fancybox>Вы успешно присоеденились к стратегии!</a></li>
+			<li class="header__item"><a href="" data-src="#quick-start-bonus" class="header__link" data-fancybox>У вас активен бонус быстрого старта</a></li>
+			<li class="header__item"><a href="" data-src="#add-strategy" class="header__link" data-fancybox>Новая заявка</a></li>
+			<li class="header__item"><a href="" data-src="#activation-strategy" class="header__link" data-fancybox>Активация стратегии</a></li>
+			<li class="header__item"><a href="" data-src="#partner-purchase" class="header__link" data-fancybox>История покупок партнёра</a></li>
 		</ul>
 	</nav>
+
+	@@include('html-components/_popup.html',{})
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="js/script.min.js"></script>
 </body>
 
 </html>

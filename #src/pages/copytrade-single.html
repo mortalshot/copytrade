@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../html-components/_head.html',{
+"title":"Название стратегии"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('../html-components/sidebar.html',{})
+
+        <div class="content">
+            @@include('../html-components/header.html',{})
+
+            <main class="main">
+                <section class="copytrade-single">
+                    <div class="copytrade-single__container">
+                        <a href="copytrade.html" class="copytrade-single__back back">
+                            <i class="icon-slider-arrow"></i>
+                            <span>Назад</span>
+                        </a>
+
+                        <div class="copytrade-single__wrapper copytrade-profitability__wrapper">
+                            <div class="copytrade-single__card copytrade-profitability__card">
+                                <div class="copytrade-single__card-wrapper copytrade-profitability__card-wrapper">
+                                    <div class="copytrade-single__card-heading">
+                                        <h1 class="copytrade-single__card-title">Название стратегии</h1>
+                                        <div class="copytrade-single__card-date">Подключена 29.09.2020</div>
+
+                                        <div class="copytrade-single__filter filter filter--select">
+                                            <button type="button" class="filter__btn">
+                                                <span>За месяц</span>
+
+                                                <i class="icon-accordion-chevron"></i>
+                                            </button>
+
+                                            <div class="filter__triggers">
+                                                <a href="" class="filter__trigger">За всё время</a>
+                                                <a href="" class="filter__trigger">За день</a>
+                                                <a href="" class="filter__trigger _active">За месяц</a>
+                                                <a href="" class="filter__trigger">За пол года</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="copytrade-single__graph copytrade-profitability__graph"><img src="../img/graph3.svg" alt="За месяц" loading="lazy"></div>
+
+                                    <div class="copytrade-single__items">
+                                        <div class="copytrade-single__item">
+                                            <div class="copytrade-single__item-val">24</div>
+                                            <div class="copytrade-single__item-descr">Общее кол-во инвесторов</div>
+                                        </div>
+                                        <div class="copytrade-single__item">
+                                            <div class="copytrade-single__item-val">$ 190 930 </div>
+                                            <div class="copytrade-single__item-descr">Средства инвесторов</div>
+                                        </div>
+                                        <div class="copytrade-single__item">
+                                            <div class="copytrade-single__item-val">$ 13 890.83</div>
+                                            <div class="copytrade-single__item-descr">Баланс инвесторов</div>
+                                        </div>
+                                        <div class="copytrade-single__item">
+                                            <div class="copytrade-single__item-val">$ 5 000</div>
+                                            <div class="copytrade-single__item-descr">Общая зафикс. прибыль всех инвесторов</div>
+                                        </div>
+                                        <div class="copytrade-single__item">
+                                            <div class="copytrade-single__item-val">$ 1 983 747</div>
+                                            <div class="copytrade-single__item-descr">Общий доход с инвесторов</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="copytrade-single__card copytrade-profitability__card">
+                                <h2 class="copytrade-single__card-title">Инвесторы</h2>
+
+                                <div class="copytrade-single__investors">
+                                    <div class="copytrade-single__investor investor">
+                                        <div class="person">
+                                            <a href="" class="person__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                            <div class="person__body">
+                                                <a href="" class="person__title">Миронов Андрей Павлович</a>
+                                                <div class="person__subtitle">Дата подключения 12.04.2021</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="investor__cell">
+                                            <div class="investor__caption">Баланс</div>
+
+                                            <div class="investor__body">
+                                                <div class="investor__val">$ 18 903</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="investor__cell">
+                                            <div class="investor__caption">Прибыль</div>
+
+                                            <div class="investor__body">
+                                                <div class="investor__rate _green">+59.23 %</div>
+                                                <div class="investor__val">+ $ 67 893.29 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="investor__cell">
+                                            <div class="investor__caption">Мой доход</div>
+
+                                            <div class="investor__body">
+                                                <div class="investor__val">$ 980</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="copytrade-single__investor investor">
+                                        <div class="person">
+                                            <a href="" class="person__logo"><img src="../img/user.jpg" alt="Миронов Андрей Павлович" loading="lazy"></a>
+                                            <div class="person__body">
+                                                <a href="" class="person__title">Миронов Андрей</a>
+                                                <div class="person__subtitle">Дата подключения 12.04.2021</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="investor__cell">
+                                            <div class="investor__caption">Баланс</div>
+
+                                            <div class="investor__body">
+                                                <div class="investor__val">$ 180 903</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="investor__cell">
+                                            <div class="investor__caption">Прибыль</div>
+
+                                            <div class="investor__body">
+                                                <div class="investor__rate _red">-5.23 %</div>
+                                                <div class="investor__val">- $ 6 893.29 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="investor__cell">
+                                            <div class="investor__caption">Мой доход</div>
+
+                                            <div class="investor__body">
+                                                <div class="investor__val">$ 1 980</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="copytrade-single__investors-btn copytrade-profitability__card-button"><a href="" class="btn btn-border">Показать еще 5</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    @@include('../html-components/_popup.html',{})
+    @@include('../html-components/_js.html',{})
+</body>
+
+</html>

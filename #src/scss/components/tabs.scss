@@ -1,19 +1,12 @@
 .tabs {
-	&__triggers {
-		display: flex;
-	}
-
-	&__triggers-item {
-	}
-
 	&__content {
-	}
-
-	&__content-item {
+		opacity: 0;
 		display: none;
+		transition: $transition ease opacity 0s;
 
-		&--active {
+		&._active {
 			display: block;
+			opacity: 1;
 		}
 	}
 }

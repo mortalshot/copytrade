@@ -193,7 +193,6 @@
         @include adaptiv-value("flex-basis", 270, 200, 0);
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
 
         @media screen and (max-width: 991px) {
             position: relative;
@@ -457,6 +456,13 @@
         color: $White;
         margin-right: 8px;
 
+        @media screen and (max-width: 575px) {
+            margin-left: -8px;
+            margin-top: -8px;
+            margin-bottom: -8px;
+            border-radius: 10px 0 0 10px;
+        }
+
         &--first {
             background-color: #425ec3;
         }
@@ -508,10 +514,7 @@
     }
 
     &__person {
-        display: flex;
-        align-items: flex-start;
         flex: 0 0 39%;
-        row-gap: 10px;
         @include adaptiv-value("column-gap", 24, -16, 1);
 
         @media screen and (max-width: 991px) {
@@ -521,51 +524,12 @@
     }
 
     &__logo {
-        flex-shrink: 0;
-        @include adaptiv-value("flex-basis", 54, 35, 1);
-        border-radius: 100%;
-
-        @media screen and (max-width: 991px) {
-            flex-basis: 54px;
-        }
-        @media screen and (max-width: 767px) {
-            @include adaptiv-value("flex-basis", 54, 45, 0);
-        }
-    }
-
-    a.referral__logo {
-        transition: $transition ease opacity 0s;
-
-        @media (any-hover: hover) {
-            &:hover {
-                opacity: 0.8;
-            }
-        }
     }
 
     &__person-body {
-        & > * {
-            &:not(:last-child) {
-                margin-bottom: 8px;
-            }
-        }
     }
 
     &__name {
-        display: inline-flex;
-        font-weight: 600;
-    }
-
-    a.referral__name {
-        color: $fontColor;
-        text-decoration: underline transparent from-font;
-        transition: $transition ease text-decoration 0s;
-
-        @media (any-hover: hover) {
-            &:hover {
-                text-decoration: underline $fontColor from-font;
-            }
-        }
     }
 
     &__reg {

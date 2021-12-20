@@ -54,7 +54,7 @@ function documentActions(e) {
     }
     // ACCORDION ACTION END
 
-    // ACCORDION ACTION START
+    // CUSTOM-SELECT START
     if (document.querySelector('.custom-select')) {
         if (targetElement.classList.contains('custom-select__link') || targetElement.closest('.custom-select__link')) {
             e.preventDefault();
@@ -65,5 +65,16 @@ function documentActions(e) {
             document.querySelector('.custom-select').classList.remove('_active');
         }
     }
-    // ACCORDION ACTION END
+    // CUSTOM-SELECT END
+
+    // NOTIFICATION START
+    if (document.querySelector('.notification')) {
+        if (targetElement.classList.contains('notification__link') || targetElement.closest('.notification')) {
+            e.preventDefault();
+            targetElement.closest('.notification').classList.toggle('_active');
+        } else {
+            document.querySelector('.notification').classList.remove('_active');
+        }
+    }
+    // NOTIFICATION END
 }

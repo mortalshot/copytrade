@@ -1,0 +1,250 @@
+.investor {
+    display: grid;
+    grid-template-columns: fit-content(333px) 1fr 1fr 1fr;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: right;
+    background: #f2f5f9;
+    border-radius: 8px;
+    padding: 16px 32px;
+    @include adaptiv-value("padding-left", 32, 16, 1);
+    @include adaptiv-value("padding-right", 32, 16, 1);
+
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    @media screen and (max-width: 575px) {
+        background: $White;
+        box-shadow: 2px 3px 12px rgba(29, 29, 80, 0.1);
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .person {
+        @include adaptiv-value("column-gap", 24, 8, 1);
+        text-align: left;
+
+        @media screen and (min-width: 992px) {
+            align-items: center;
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            &:not(:last-child) {
+                padding-bottom: 6px;
+            }
+        }
+        @media screen and (max-width: 575px) {
+            &:not(:last-child) {
+                padding-bottom: 6px;
+            }
+        }
+
+        &__logo {
+            flex: 0 0 32px;
+
+            @media screen and (min-width: $layoutDesktop + 0.02 + "px") {
+                @include adaptiv-value("flex-basis", 32, 25, 0);
+            }
+        }
+
+        &__body {
+            & > * {
+                &:not(:last-child) {
+                    @include adaptiv-value("margin-bottom", 4, 0, 1);
+                }
+            }
+        }
+
+        &__title {
+            font-weight: 500;
+            @include adaptiv-font(13, 18, 10, 0);
+
+            @media screen and (max-width: 575px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        &__subtitle {
+            @include adaptiv-font(12, 17, 9, 0);
+            color: $DGrey;
+        }
+    }
+
+    &__cell {
+        &:last-child {
+            text-align: right;
+
+            .investor__body {
+                justify-content: flex-end;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 6px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #d5dbe4;
+                padding-bottom: 6px;
+            }
+        }
+        @media screen and (max-width: 575px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 6px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #d5dbe4;
+                padding-bottom: 6px;
+            }
+        }
+    }
+
+    &__caption {
+        font-size: 12px;
+        line-height: 17px;
+        color: $Grey;
+        white-space: nowrap;
+
+        @media screen and (min-width: $layoutDesktop + 0.02 + "px") {
+            @include adaptiv-font(12, 17, 10, 0);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 3px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 8px;
+        text-align: right;
+
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+        @media screen and (max-width: 575px) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+
+    &__val {
+        font-weight: 600;
+        @include adaptiv-font(13, 18, 12, 0);
+        white-space: nowrap;
+    }
+
+    &__rate {
+        white-space: nowrap;
+        @include adaptiv-font(12, 17, 10, 0);
+    }
+}
+
+.copytrade-single {
+    &__back {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 32, 24, 1);
+        }
+    }
+
+    &__card-heading {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include adaptiv-value("margin", -16, -6, 1);
+
+        & > * {
+            @include adaptiv-value("padding", 16, 6, 1);
+        }
+    }
+
+    &__card-title {
+        flex: 0 0 50%;
+        font-weight: 700;
+        @include adaptiv-font(24, 34, 16, 1);
+
+        @media screen and (max-width: 575px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__card-date {
+        flex: 0 0 50%;
+        text-align: right;
+        @include adaptiv-font(12, 17, 10, 0);
+        color: $Grey;
+
+        @media screen and (max-width: 575px) {
+            text-align: left;
+        }
+    }
+
+    &__graph {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 48, 24, 1);
+        }
+    }
+
+    &__items {
+        display: grid;
+        @include adaptiv-value("column-gap", 16, 12, 1);
+        @include adaptiv-value("row-gap", 16, 10, 1);
+        grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+
+        @media screen and (max-width: 450px) {
+            grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
+        }
+    }
+
+    &__item {
+        background: #f2f5f9;
+        padding: 16px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & > * {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 16, 8, 1);
+            }
+        }
+    }
+
+    &__item-val {
+        font-weight: 600;
+        @include adaptiv-font(15, 21, 12, 0);
+    }
+
+    &__item-descr {
+        font-weight: 400;
+        @include adaptiv-font(12, 17, 10, 0);
+        color: $DGrey;
+    }
+
+    &__investor {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+
+            @media screen and (max-width: 575px) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__investors-btn {
+        &:not(:first-child) {
+            @include adaptiv-value("margin-top", 16, 24, 1);
+        }
+    }
+}

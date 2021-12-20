@@ -1,0 +1,59 @@
+// person ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.person {
+    display: flex;
+    align-items: flex-start;
+    @include adaptiv-value("column-gap", 24, 16, 0);
+    row-gap: 10px;
+
+    &__logo {
+        flex-shrink: 0;
+        @include adaptiv-value("flex-basis", 54, 35, 1);
+        border-radius: 100%;
+        overflow: hidden;
+
+        @media screen and (max-width: 991px) {
+            flex-basis: 54px;
+        }
+        @media screen and (max-width: 767px) {
+            @include adaptiv-value("flex-basis", 54, 45, 0);
+        }
+    }
+
+    a.person__logo {
+        transition: $transition ease opacity 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__body {
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        & > a {
+            color: $fontColor;
+            text-decoration: underline transparent from-font;
+            transition: $transition ease text-decoration 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline $fontColor from-font;
+                }
+            }
+        }
+    }
+
+    &__title {
+        display: inline-flex;
+        font-weight: 600;
+    }
+
+    &__subtitle {
+    }
+}

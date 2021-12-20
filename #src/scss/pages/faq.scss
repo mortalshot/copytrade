@@ -1,0 +1,144 @@
+.callback {
+    &__wrapper {
+        max-width: 600px;
+
+        & > * {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 24, 16, 1);
+            }
+        }
+    }
+
+    &__text {
+        @include adaptiv-font(16, 22, 14, 1);
+
+        p {
+            color: $fontColor;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 16px;
+        @include adaptiv-value("column-gap", 24, 16, 1);
+    }
+
+    &__contact {
+        @media screen and (max-width: 450px) {
+            width: 100%;
+        }
+
+        .btn {
+            @include adaptiv-value("padding-top", 15, 10, 1);
+            @include adaptiv-value("padding-bottom", 15, 10, 1);
+            @include adaptiv-value("padding-left", 32, 16, 1);
+            @include adaptiv-value("padding-right", 32, 16, 1);
+            gap: 10px;
+            @include adaptiv-font(14, 20, 12, 1);
+            text-align: left;
+
+            @media screen and (max-width: 450px) {
+                width: 100%;
+            }
+
+            img {
+                max-width: 20px;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    img {
+                        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.faq {
+    &__title {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 64, 24, 1);
+        }
+    }
+
+    &__card {
+        background: #ffffff;
+        box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
+        border-radius: 10px;
+        @include adaptiv-value("padding-top", 32, 24, 1);
+        @include adaptiv-value("padding-bottom", 32, 24, 1);
+        @include adaptiv-value("padding-left", 40, 16, 1);
+        @include adaptiv-value("padding-right", 40, 16, 1);
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        & > * {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 24, 16, 1);
+            }
+        }
+    }
+
+    &__accordion {
+        .accordion {
+            &__item {
+                background: $White;
+                box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+                border-radius: 10px;
+                @include adaptiv-value("padding-left", 40, 16, 1);
+                @include adaptiv-value("padding-right", 40, 16, 1);
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+
+            &__button {
+                @include adaptiv-value("padding-top", 32, 16, 1);
+                @include adaptiv-value("padding-bottom", 32, 16, 1);
+                font-weight: 700;
+                @include adaptiv-font(16, 22, 14, 1);
+                display: flex;
+                align-items: center;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        span {
+                            color: rgba($color: $fontColor, $alpha: 0.8);
+                        }
+                    }
+                }
+
+                span {
+                    padding-right: 30px;
+                    max-width: 630px;
+                    transition: $transition ease color 0s;
+
+                    @media screen and (min-width: $layoutDesktop + 0.02 + "px") {
+                        max-width: 78%;
+                    }
+                }
+
+                &::after {
+                    font-size: 8px;
+                    color: $Blue;
+                    background: transparent;
+                }
+            }
+
+            &__text {
+                @include adaptiv-value("padding-bottom", 32, 16, 1);
+                max-width: 600px;
+
+                @media screen and (min-width: $layoutDesktop + 0.02 + "px") {
+                    max-width: 74%;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,9 @@
 // base ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .col {
+    &-5,
     &-6,
+    &-7,
+    &-8,
     &-12,
     &-sm-3,
     &-sm-5,
@@ -15,6 +18,7 @@
     &-md-7,
     &-md-8,
     &-md-9,
+    &-md-10,
     &-md-12,
     &-lg-3,
     &-lg-6,
@@ -22,13 +26,34 @@
     &-lg-12,
     &-xl-3 {
         width: 100%;
-        padding: 8px;
+        @include adaptiv-value("padding-left", 16, 5, 1);
+        @include adaptiv-value("padding-right", 16, 5, 1);
         min-height: 1px;
+
+        & > [class^="col-"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &-5 {
+        flex: 0 0 41.666%;
+        max-width: 41.666%;
     }
 
     &-6 {
         flex: 0 0 50%;
         max-width: 50%;
+    }
+
+    &-7 {
+        flex: 0 0 58.333%;
+        max-width: 58.333%;
+    }
+
+    &-8 {
+        flex: 0 0 66.666%;
+        max-width: 66.666%;
     }
 
     &-12 {
@@ -127,6 +152,13 @@
         }
     }
 
+    &-md-10 {
+        @media screen and (min-width: 768px) {
+            flex: 0 0 83.333%;
+            max-width: 83.333%;
+        }
+    }
+
     &-md-12 {
         @media screen and (min-width: 768px) {
             flex: 0 0 100%;
@@ -221,6 +253,9 @@ img {
     color: $Red;
 }
 
+.text-end {
+    text-align: right !important;
+}
 // buttons ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .btn {
     text-align: center;
@@ -246,7 +281,7 @@ img {
 
     &-big {
         @include adaptiv-font(16, 22, 14, 1);
-        min-height: 58px;
+        @include adaptiv-value("min-height", 58, 45, 1);
     }
 
     &-color {
@@ -359,6 +394,16 @@ body {
     }
 }
 
+.body {
+    &_copytrade {
+        .header::before {
+            @media screen and (max-width: 450px) {
+                height: 257px;
+            }
+        }
+    }
+}
+
 .wrapper {
     display: flex;
     min-height: 100vh;
@@ -374,10 +419,24 @@ body {
 
 .main {
     position: relative;
-}
 
-section {
-    @include adaptiv-value("margin-bottom", 64, 40, 1);
+    @media screen and (max-width: 767px) {
+        margin-top: 50px;
+
+        & > section,
+        & > div {
+            @include adaptiv-value("margin-bottom", 64, 40, 1);
+
+            &:first-child {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    & > section,
+    & > div {
+        @include adaptiv-value("margin-bottom", 64, 40, 1);
+    }
 }
 
 .footer {
@@ -507,49 +566,48 @@ section {
         }
     }
 
-    &__button-next {
-    }
-
     &__button-disabled {
         opacity: 0.6;
         cursor: not-allowed;
     }
 }
 
-._content {
-    p {
-        margin: 20px 0;
-        color: $DGrey;
+// info ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 22px;
+        flex: 0 0 22px;
     }
 
-    a {
-        color: $fontColor;
-        text-decoration: underline $fontColor from-font;
-        transition: $transition ease text-decoration, $transition opacity 0s;
+    &--pending {
+        color: #e39b0d;
 
-        @media (any-hover: hover) {
-            &:hover {
-                opacity: 0.6;
-                text-decoration: underline transparent from-font;
-            }
+        &::before {
+            background: url(../img/icons/alert2.svg) no-repeat center/contain;
         }
     }
 
-    ul {
-        li {
-            color: $DGrey;
+    &--accept {
+        color: $Green;
 
-            &:not(:last-child) {
-                margin-bottom: 16px;
-            }
+        &::before {
+            background: url(../img/icons/alert3.svg) no-repeat center/contain;
         }
     }
 
-    :first-child {
-        margin-top: 0;
-    }
-    :last-child {
-        margin-bottom: 0;
+    &--rejected {
+        color: $Red;
+
+        &::before {
+            background: url(../img/icons/alert4.svg) no-repeat center/contain;
+        }
     }
 }
 
@@ -800,7 +858,6 @@ section {
         font-weight: 600;
         padding-left: 26px;
         position: relative;
-        transition: $transition ease color 0s;
 
         &::after,
         &::before {
@@ -830,18 +887,6 @@ section {
             transition: $transition ease opacity 0s;
         }
 
-        @media (any-hover: hover) {
-            &:not(._active) {
-                &:hover {
-                    color: $Blue;
-
-                    &::before {
-                        border-color: $Blue;
-                    }
-                }
-            }
-        }
-
         &:not(:last-child) {
             margin-bottom: 16px;
         }
@@ -852,6 +897,24 @@ section {
             }
             &::after {
                 opacity: 1;
+            }
+        }
+
+        a {
+            color: $fontColor;
+
+            @media (any-hover: hover) {
+                transition: $transition ease color 0s;
+
+                &:not(._active) {
+                    &:hover {
+                        color: $Blue;
+
+                        &::before {
+                            border-color: $Blue;
+                        }
+                    }
+                }
             }
         }
     }
@@ -873,6 +936,107 @@ section {
                 pointer-events: all;
             }
         }
+    }
+}
+
+.back {
+    font-size: 16px;
+    line-height: 22px;
+    color: $fontColor;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    @media screen and (max-width: 450px) {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 600;
+    }
+
+    i {
+        justify-content: center;
+        flex-shrink: 0;
+        @include adaptiv-value("flex-basis", 40, 30, 1);
+        @include adaptiv-value("height", 40, 30, 1);
+        border-radius: 100%;
+        background: $White;
+        box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
+        transform: rotate(180deg);
+        @include adaptiv-font(12, 12, 10, 1);
+        color: $DGrey;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            span {
+                text-decoration: underline $fontColor from-font;
+            }
+
+            i {
+                animation: shake-bottom-rotate 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+            }
+        }
+    }
+
+    span {
+        text-decoration: underline transparent from-font;
+        text-underline-offset: 3px;
+        transition: $transition ease text-decoration 0s;
+    }
+}
+
+.single {
+    &__title {
+        &:not(:last-child) {
+            @include adaptiv-value("margin-bottom", 64, 24, 1);
+        }
+    }
+
+    &__content {
+        background: $White;
+        box-shadow: 4px 14px 24px rgba(29, 29, 80, 0.08);
+        border-radius: 10px;
+        @include adaptiv-value("padding-top", 32, 24, 16);
+        @include adaptiv-value("padding-bottom", 32, 24, 16);
+        @include adaptiv-value("padding-left", 40, 16, 16);
+        @include adaptiv-value("padding-right", 40, 16, 16);
+    }
+}
+
+._content {
+    p {
+        margin: 20px 0;
+        color: $DGrey;
+    }
+
+    a {
+        color: $fontColor;
+        text-decoration: underline $fontColor from-font;
+        transition: $transition ease text-decoration, $transition opacity 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.6;
+                text-decoration: underline transparent from-font;
+            }
+        }
+    }
+
+    ul {
+        li {
+            color: $DGrey;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    :first-child {
+        margin-top: 0;
+    }
+    :last-child {
+        margin-bottom: 0;
     }
 }
 // swiper ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

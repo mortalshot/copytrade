@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../html-components/_head.html',{
+"title":"Настройки"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('../html-components/sidebar.html',{})
+
+        <div class="content">
+            @@include('../html-components/header.html',{})
+
+            <main class="main">
+                <section class="settings">
+                    <div class="settings__container">
+                        <h1 class="settings__title">
+                            <img src="../img/icons/settings.svg" alt="Настройки" loading="lazy">
+                            <span>Настройки</span>
+                        </h1>
+
+                        <div class="settings__wallet settings-wallet">
+                            <div class="settings-wallet__wrapper">
+                                <div class="settings-wallet__image"><img src="../img/banners/settings-wallet.svg" alt="Ваш USDT кошелёк" loading="lazy"></div>
+
+                                <form action="" class="settings-wallet__form form">
+                                    <div class="form__row">
+                                        <div class="form__item col-12 col-md-7">
+                                            <label for="#wallet-input" class="form__label"> Ваш USDT кошелёк </label>
+                                            <div class="form__input-wrapper form__input-wallet">
+                                                <input id="wallet-input" type="text" class="form__input" value="1FLSKFWQMELALDKSDM">
+                                            </div>
+                                        </div>
+
+                                        <div class="form__item col-12 col-md-5">
+                                            <div class="form__button"><button class="btn btn-color btn-big">Сохранить</button></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="personal">
+                    <div class="personal__container">
+                        <h2 class="personal__title">Персональные данные</h2>
+
+                        <div class="personal__card">
+                            <div class="personal__avatar avatar">
+                                <a href="" class="avatar__image"><img src="../img/user.jpg" alt="Аватар" loading="lazy"></a>
+                                <a href="" class="avatar__link">Загрузить фото</a>
+                            </div>
+
+                            <form action="" class="personal__form form">
+                                <div class="form__row">
+                                    <div class="form__item col-12 col-md-6">
+                                        <label for="personal-name" class="form__label">Имя</label>
+                                        <div class="form__input-wrapper form__input-person">
+                                            <input id="personal-name" type="text" class="form__input" value="Максим">
+                                        </div>
+                                    </div>
+                                    <div class="form__item col-12 col-md-6">
+                                        <label for="personal-surname" class="form__label">Фамилия</label>
+                                        <div class="form__input-wrapper form__input-person">
+                                            <input id="personal-surname" type="text" class="form__input" value="Володченко">
+                                        </div>
+                                    </div>
+                                    <div class="form__item col-12 col-md-6">
+                                        <label for="personal-phone" class="form__label">Телефон</label>
+
+                                        <div class="form__input-wrapper form__input-phone">
+                                            <input id="personal-phone" type="text" class="form__input form__input--phone" value="+7 900 987-89-32" placeholder="+7 ___ ___-__-__">
+                                        </div>
+
+                                        <div class="form__item-status form__item-status--alert"> Для того чтобы вывести ваши средства, подтвердите пожалуйста свою почту </div>
+                                    </div>
+                                    <div class="form__item col-12 col-md-6">
+                                        <label for="personal-mail" class="form__label">Почта</label>
+
+                                        <div class="form__input-wrapper form__input-mail">
+                                            <input id="personal-mail" type="email" class="form__input" value="myname@gmail.com" placeholder="example@gmail.com">
+                                        </div>
+
+                                        <div class="form__item-status form__item-status--accept"> Почта подтверждена </div>
+                                    </div>
+                                    <div class="form__item col-12 col-md-6">
+                                        <label for="personal-name" class="form__label">Страна</label>
+                                        <div class="form__input-wrapper form__input-country">
+                                            <select name="form[]" class="form">
+                                                <option value="Россия" selected>Россия</option>
+                                                <option value="Италия">Италия</option>
+                                                <option value="Испния">Испния</option>
+                                                <option value="Франция">Франция</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Германия">Германия</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form__item col-12 col-md-6">
+                                        <label for="personal-name" class="form__label">Город</label>
+                                        <div class="form__input-wrapper form__input-city">
+                                            <select name="form[]" class="form">
+                                                <option value="Краснодар" selected>Краснодар</option>
+                                                <option value="Тверь">Тверь</option>
+                                                <option value="Москва">Москва</option>
+                                                <option value="Сочи">Сочи</option>
+                                                <option value="Крым">Крым</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form__item col-12 col-md-6 mb-0">
+                                        <button type="submit" class="btn btn-color btn-big form__submit">Сохранить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="settings-security">
+                    <div class="settings-security__container">
+                        <h2 class="personal__title">Безопасность</h2>
+
+                        <div class="personal__card">
+                            <form action="" class="personal__form form">
+                                <div class="form__row">
+                                    <div class="form__item col-12">
+                                        <label for="current-password" class="form__label">Текущий пароль</label>
+                                        <div class="form__input-wrapper form__input-password">
+                                            <input id="current-password" type="password" class="form__input" value="Максим">
+                                            <button><i class="icon-password"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="form__item col-12">
+                                        <label for="new-password" class="form__label">Новый пароль</label>
+                                        <div class="form__input-wrapper form__input-password">
+                                            <input id="new-password" type="password" class="form__input" value="Максим">
+                                            <button><i class="icon-hide-password"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="form__item col-12">
+                                        <label for="repeat-password" class="form__label">Повторите новый пароль</label>
+                                        <div class="form__input-wrapper form__input-password">
+                                            <input id="repeat-password" type="password" class="form__input" value="Максим">
+                                            <button><i class="icon-password"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="form__item col-12 mb-0">
+                                        <button type="submit" class="btn btn-color btn-big form__submit">Сохранить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="external-wallets">
+                    <div class="external-wallets__container">
+                        <h2 class="personal__title">Внешние кошельки</h2>
+
+                        <div class="external-wallets__wallet external-wallet">
+                            <div class="external-wallet__wrapper">
+                                <div class="external-wallet__row">
+                                    <div class="external-wallet__left">
+                                        <div class="external-wallet__caption">Название внешнего кошелька</div>
+
+                                        <div class="external-wallet__address">
+                                            <img src="../img/icons/wallet2.svg" alt="" loading="lazy">
+                                            <span>1FLSKFWQMELALDKSDM</span>
+                                        </div>
+                                    </div>
+                                    <div class="external-wallet__actions">
+                                        <a href="" id="wallet-edit" class="external-wallet__action"><i class="icon-edit"></i></a>
+                                        <a href="" id="wallet-remove" class="external-wallet__action"><i class="icon-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form action="" class="external-wallet__wrapper form">
+                                <div class="form__row">
+                                    <div class="form__item col-12">
+                                        <label for="external-wallet-1-name-edit" class="form__label">Название кошелька</label>
+                                        <div class="form__input-wrapper">
+                                            <input id="external-wallet-1-name-edit" type="text" class="form__input" value="Название внешнего кошелька">
+                                        </div>
+                                    </div>
+
+                                    <div class="form__item col-12 col-md-8">
+                                        <label for="external-wallet-1-address-edit" class="form__label">Адрес кошелька</label>
+                                        <div class="form__input-wrapper form__input-wallet">
+                                            <input id="external-wallet-1-address-edit" type="text" class="form__input" value="1FLSKFWQMELALDKSDM">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="external-wallet__buttons">
+                                    <div class="external-wallet__button"><button type="submit" class="btn btn-big btn-color">Сохранить</button></div>
+                                    <div class="external-wallet__button"><button type="cancel" class="btn btn-big btn-border">Отменить</button></div>
+                                </div>
+                            </form>
+
+                            <a href="" class="external-wallet__add-wallet">
+                                <i class="icon-add"></i>
+                                <span>Добавить кошелёк</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    @@include('../html-components/_popup.html',{})
+    @@include('../html-components/_js.html',{})
+</body>
+
+</html>

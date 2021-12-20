@@ -20,6 +20,11 @@
     }
 
     &__button {
+        position: relative;
+        text-align: left;
+        width: 100%;
+        background: transparent;
+
         &::after {
             content: "\e919";
             font-family: "icomoon" !important;

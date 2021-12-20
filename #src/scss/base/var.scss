@@ -11,6 +11,11 @@ $sizeHeaderHeightMobile: 50px;
 $sidebarWidth: 310;
 $sidebarHideWidth: 140;
 
+$pc: $sizeContainer + "px"; // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: 991.98px; // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98px; // Телефоны L
+$mobileSmall: 479.98px; // Телефоны S
+
 // === Font ===
 $fontMain: "Montserrat";
 $fontWeight: 500;
@@ -31,3 +36,5 @@ $Red: #e12c2c;
 $LOrange: #ffce45;
 
 $transition: 0.3s;
+$scrollTrack: #d5dbe4;
+$scrollThumb: #0065ff;

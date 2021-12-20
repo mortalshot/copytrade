@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../html-components/_head.html',{
+"title":"Копи трейд"
+})
+
+<body class="body_copytrade">
+    <div class="wrapper">
+        @@include('../html-components/sidebar.html',{})
+
+        <div class="content">
+            @@include('../html-components/header.html',{})
+
+            <main class="main">
+                <section class="copytrade">
+                    <div class="copytrade__container">
+                        <div class="copytrade__heading">
+                            <h1 class="copytrade__title">
+                                <img src="../img/icons/copytrade.svg" alt="Копи трейд" loading="lazy">
+                                <span>Копи трейд</span>
+                            </h1>
+
+                            <div class="copytrade__filter filter">
+                                <div class="filter__triggers">
+                                    <a href="#copytrade-tab-1" class="filter__trigger tabs__trigger _active">Витрина</a>
+                                    <a href="#copytrade-tab-2" class="filter__trigger tabs__trigger">Мои стратегии</a>
+                                    <a href="#copytrade-tab-3" class="filter__trigger tabs__trigger">Трейдер</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="copytrade__body">
+                            <!-- Add class "_active to show this tab" -->
+                            <div id="copytrade-tab-1" class="copytrade__content tabs__content _active">
+                                <div class="copytrade__subfilter filter">
+                                    <div class="filter__triggers">
+                                        <a href="#copytrade-tab-1-subtab-1" class="filter__trigger _active">Forex</a>
+                                        <a href="#copytrade-tab-1-subtab-2" class="filter__trigger">Crypto</a>
+                                    </div>
+                                </div>
+
+                                <div id="copytrade-tab-1-subtab-1" class="copytrade__subcontent tabs__content _active">
+                                    <div class="copytrade__showcase showcase">
+                                        <div class="showcase__item">
+                                            <div class="showcase__item-wrapper">
+                                                <a data-src="https://youtu.be/20Ap1kH8wuU" class="showcase__image showcase__image--video" data-fancybox="video-gallery">
+                                                    <img src="https://assets.htmlacademy.ru/img/blog/113/jpeg/jpeg1@1x.jpg" alt="Название стратегии" loading="lazy">
+                                                </a>
+                                                <div class="showcase__body">
+                                                    <div class="showcase__date">Добавлено 2 д. назад</div>
+                                                    <h3 class="showcase__title">Название стратегии</h3>
+                                                    <div class="showcase__text _content">
+                                                        <p>Тут брокер пишет небольшое описание себя и стратегии. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить.</p>
+                                                    </div>
+                                                    <div class="showcase__attributes">
+                                                        <div class="showcase__attribute">
+                                                            <span class="showcase__attribute-label">Комиссия</span>
+                                                            <span class="showcase__attribute-value">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="showcase__footer">
+                                                    <div class="showcase__actions">
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-color" data-fancybox>Подключиться</a></div>
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-border" data-fancybox>Мониторинг</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase__item">
+                                            <div class="showcase__item-wrapper">
+                                                <a href="" class="showcase__image">
+                                                    <img src="../img/banners/showcase.jpg" alt="Название стратегии" loading="lazy">
+                                                </a>
+                                                <div class="showcase__body">
+                                                    <div class="showcase__date">Добавлено 4 д. назад</div>
+                                                    <h3 class="showcase__title">Название стратегии</h3>
+                                                    <div class="showcase__text _content">
+                                                        <p>Тут брокер пишет небольшое описание себя и стратегии.</p>
+                                                        <p>Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить.</p>
+                                                    </div>
+                                                    <div class="showcase__attributes">
+                                                        <div class="showcase__attribute">
+                                                            <span class="showcase__attribute-label">Комиссия</span>
+                                                            <span class="showcase__attribute-value">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="showcase__footer">
+                                                    <div class="showcase__actions">
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-color" data-fancybox>Подключиться</a></div>
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-border" data-fancybox>Мониторинг</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase__item">
+                                            <div class="showcase__item-wrapper">
+                                                <div class="showcase__image">
+                                                    <img src="../img/banners/showcase.jpg" alt="Название стратегии" loading="lazy">
+                                                </div>
+                                                <div class="showcase__body">
+                                                    <div class="showcase__date">Добавлено 4 д. назад</div>
+                                                    <h3 class="showcase__title">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</h3>
+                                                    <div class="showcase__text _content">
+                                                        <p>Тут брокер пишет небольшое описание себя и стратегии.</p>
+                                                        <p>Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить.</p>
+                                                    </div>
+                                                    <div class="showcase__attributes">
+                                                        <div class="showcase__attribute">
+                                                            <span class="showcase__attribute-label">Комиссия</span>
+                                                            <span class="showcase__attribute-value">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="showcase__footer">
+                                                    <div class="showcase__actions">
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-color" data-fancybox>Подключиться</a></div>
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-border" data-fancybox>Мониторинг</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase__item">
+                                            <div class="showcase__item-wrapper">
+                                                <a href="" class="showcase__image showcase__image--video">
+                                                    <img src="../img/banners/showcase.jpg" alt="Название стратегии" loading="lazy">
+                                                </a>
+                                                <div class="showcase__body">
+                                                    <div class="showcase__date">Добавлено 4 д. назад</div>
+                                                    <h3 class="showcase__title">Далеко-далеко</h3>
+                                                    <div class="showcase__attributes">
+                                                        <div class="showcase__attribute">
+                                                            <span class="showcase__attribute-label">Комиссия</span>
+                                                            <span class="showcase__attribute-value">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="showcase__footer">
+                                                    <div class="showcase__actions">
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-color" data-fancybox>Подключиться</a></div>
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-border" data-fancybox>Мониторинг</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase__item">
+                                            <div class="showcase__item-wrapper">
+                                                <a href="" class="showcase__image showcase__image--video">
+                                                    <img src="../img/banners/showcase.jpg" alt="Название стратегии" loading="lazy">
+                                                </a>
+                                                <div class="showcase__body">
+                                                    <div class="showcase__date">Добавлено 2 д. назад</div>
+                                                    <h3 class="showcase__title">Название стратегии</h3>
+                                                    <div class="showcase__text _content">
+                                                        <p>Тут брокер пишет небольшое описание себя и стратегии. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить.</p>
+                                                    </div>
+                                                    <div class="showcase__attributes">
+                                                        <div class="showcase__attribute">
+                                                            <span class="showcase__attribute-label">Комиссия</span>
+                                                            <span class="showcase__attribute-value">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="showcase__footer">
+                                                    <div class="showcase__actions">
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-color" data-fancybox>Подключиться</a></div>
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-border" data-fancybox>Мониторинг</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase__item">
+                                            <div class="showcase__item-wrapper">
+                                                <a href="" class="showcase__image">
+                                                    <img src="../img/banners/showcase.jpg" alt="Название стратегии" loading="lazy">
+                                                </a>
+                                                <div class="showcase__body">
+                                                    <div class="showcase__date">Добавлено 4 д. назад</div>
+                                                    <h3 class="showcase__title">Название стратегии</h3>
+                                                    <div class="showcase__text _content">
+                                                        <p>Тут брокер пишет небольшое описание себя и стратегии.</p>
+                                                        <p>Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить.</p>
+                                                    </div>
+                                                    <div class="showcase__attributes">
+                                                        <div class="showcase__attribute">
+                                                            <span class="showcase__attribute-label">Комиссия</span>
+                                                            <span class="showcase__attribute-value">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="showcase__footer">
+                                                    <div class="showcase__actions">
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-color" data-fancybox>Подключиться</a></div>
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-border" data-fancybox>Мониторинг</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase__item">
+                                            <div class="showcase__item-wrapper">
+                                                <div class="showcase__image">
+                                                    <img src="../img/banners/showcase.jpg" alt="Название стратегии" loading="lazy">
+                                                </div>
+                                                <div class="showcase__body">
+                                                    <div class="showcase__date">Добавлено 4 д. назад</div>
+                                                    <h3 class="showcase__title">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</h3>
+                                                    <div class="showcase__text _content">
+                                                        <p>Тут брокер пишет небольшое описание себя и стратегии.</p>
+                                                        <p>Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить.</p>
+                                                    </div>
+                                                    <div class="showcase__attributes">
+                                                        <div class="showcase__attribute">
+                                                            <span class="showcase__attribute-label">Комиссия</span>
+                                                            <span class="showcase__attribute-value">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="showcase__footer">
+                                                    <div class="showcase__actions">
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-color" data-fancybox>Подключиться</a></div>
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-border" data-fancybox>Мониторинг</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase__item">
+                                            <div class="showcase__item-wrapper">
+                                                <a href="" class="showcase__image showcase__image--video">
+                                                    <img src="../img/banners/showcase.jpg" alt="Название стратегии" loading="lazy">
+                                                </a>
+                                                <div class="showcase__body">
+                                                    <div class="showcase__date">Добавлено 4 д. назад</div>
+                                                    <h3 class="showcase__title">Далеко-далеко</h3>
+                                                    <div class="showcase__attributes">
+                                                        <div class="showcase__attribute">
+                                                            <span class="showcase__attribute-label">Комиссия</span>
+                                                            <span class="showcase__attribute-value">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="showcase__footer">
+                                                    <div class="showcase__actions">
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-color" data-fancybox>Подключиться</a></div>
+                                                        <div class="showcase__action"><a data-src="#broker-connect" class="btn btn-border" data-fancybox>Мониторинг</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="copytrade__navigation">
+                                        <ul class="copytrade__pagination pagination">
+                                            <li><button class="pagination__item _active">1</button></li>
+                                            <li><button class="pagination__item">2</button></li>
+                                            <li><button class="pagination__item">3</button></li>
+                                            <li><span class="pagination__item pagination__more">...</span></li>
+                                            <li><button class="pagination__item">23</button></li>
+                                            <li><button class="pagination__item">24</button></li>
+                                        </ul>
+
+                                        <div class="arrows">
+                                            <div class="arrows__button arrows__button-prev arrows__button-disabled"><i class="icon-slider-arrow"></i></div>
+                                            <div class="arrows__button arrows__button-next"><i class="icon-slider-arrow"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add class "_active to show this tab" -->
+                            <div id="copytrade-tab-2" class="copytrade__content tabs__content ">
+                                <div class="copytrade__subfilter filter">
+                                    <div class="filter__triggers">
+                                        <a href="#copytrade-tab-2-subtab-1" class="filter__trigger _active">Forex</a>
+                                        <a href="#copytrade-tab-2-subtab-2" class="filter__trigger">Crypto</a>
+                                    </div>
+                                </div>
+
+                                <div id="copytrade-tab-2-subtab-1" class="copytrade__subcontent tabs__content _active">
+                                    <div class="copytrade__strategy">
+                                        <div class="strategy">
+                                            <div class="strategy__item">
+                                                <div class="strategy__wrapper">
+                                                    <div class="strategy__person person">
+                                                        <a href="" class="person__logo"><img src="../img/user.jpg" alt="Валентин Петухов" loading="lazy"></a>
+                                                        <div class="person__body">
+                                                            <a href="" class="person__title">Название стратегии</a>
+                                                            <div class="person__subtitle">Валентин Петухов</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="strategy__graph"><img src="../img/graph2.svg" alt="" loading="lazy"></div>
+
+                                                    <div class="strategy__table table">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общий доход</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">+&nbsp;$&nbsp;67&nbsp;893.29 </div>
+                                                                        <div class="strategy__table-percent _green">+59.23&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Доход за день</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">-&nbsp;$&nbsp;13&nbsp;890.83</div>
+                                                                        <div class="strategy__table-percent _green">-7.81&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Открытые сделки с&nbsp;плавающим результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$ 190 930 </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Закрытые сделки с&nbsp;зафиксированным результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;5&nbsp;000</div>
+                                                                        <div class="strategy__table-percent _green">+9&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Количество закрытых сделок</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">19</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="strategy__item">
+                                                <div class="strategy__wrapper">
+                                                    <div class="strategy__person person">
+                                                        <a href="" class="person__logo"><img src="../img/user.jpg" alt="Валентин Петухов" loading="lazy"></a>
+                                                        <div class="person__body">
+                                                            <a href="" class="person__title">Название стратегии</a>
+                                                            <div class="person__subtitle">Валентин Петухов</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="strategy__graph"><img src="../img/graph2.svg" alt="" loading="lazy"></div>
+
+                                                    <div class="strategy__table table">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общий доход</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">+&nbsp;$&nbsp;67&nbsp;893.29 </div>
+                                                                        <div class="strategy__table-percent _green">+59.23&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Доход за день</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">-&nbsp;$&nbsp;13&nbsp;890.83</div>
+                                                                        <div class="strategy__table-percent _green">-7.81&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Открытые сделки с&nbsp;плавающим результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$ 190 930 </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Закрытые сделки с&nbsp;зафиксированным результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;5&nbsp;000</div>
+                                                                        <div class="strategy__table-percent _green">+9&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Количество закрытых сделок</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">19</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="strategy__item">
+                                                <div class="strategy__wrapper">
+                                                    <div class="strategy__person person">
+                                                        <a href="" class="person__logo"><img src="../img/user.jpg" alt="Валентин Петухов" loading="lazy"></a>
+                                                        <div class="person__body">
+                                                            <a href="" class="person__title">Название стратегии</a>
+                                                            <div class="person__subtitle">Валентин Петухов</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="strategy__graph"><img src="../img/graph2.svg" alt="" loading="lazy"></div>
+
+                                                    <div class="strategy__table table">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общий доход</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">+&nbsp;$&nbsp;67&nbsp;893.29 </div>
+                                                                        <div class="strategy__table-percent _green">+59.23&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Доход за день</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">-&nbsp;$&nbsp;13&nbsp;890.83</div>
+                                                                        <div class="strategy__table-percent _green">-7.81&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Открытые сделки с&nbsp;плавающим результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$ 190 930 </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Закрытые сделки с&nbsp;зафиксированным результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;5&nbsp;000</div>
+                                                                        <div class="strategy__table-percent _green">+9&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Количество закрытых сделок</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">19</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="strategy__item">
+                                                <div class="strategy__wrapper">
+                                                    <div class="strategy__person person">
+                                                        <a href="" class="person__logo"><img src="../img/user.jpg" alt="Валентин Петухов" loading="lazy"></a>
+                                                        <div class="person__body">
+                                                            <a href="" class="person__title">Название стратегии</a>
+                                                            <div class="person__subtitle">Валентин Петухов</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="strategy__graph"><img src="../img/graph2.svg" alt="" loading="lazy"></div>
+
+                                                    <div class="strategy__table table">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общий доход</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">+&nbsp;$&nbsp;67&nbsp;893.29 </div>
+                                                                        <div class="strategy__table-percent _green">+59.23&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Доход за день</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">-&nbsp;$&nbsp;13&nbsp;890.83</div>
+                                                                        <div class="strategy__table-percent _green">-7.81&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Открытые сделки с&nbsp;плавающим результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$ 190 930 </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Закрытые сделки с&nbsp;зафиксированным результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;5&nbsp;000</div>
+                                                                        <div class="strategy__table-percent _green">+9&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Количество закрытых сделок</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">19</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="strategy__item">
+                                                <div class="strategy__wrapper">
+                                                    <div class="strategy__person person">
+                                                        <a href="" class="person__logo"><img src="../img/user.jpg" alt="Валентин Петухов" loading="lazy"></a>
+                                                        <div class="person__body">
+                                                            <a href="" class="person__title">Название стратегии</a>
+                                                            <div class="person__subtitle">Валентин Петухов</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="strategy__graph"><img src="../img/graph2.svg" alt="" loading="lazy"></div>
+
+                                                    <div class="strategy__table table">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общий доход</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">+&nbsp;$&nbsp;67&nbsp;893.29 </div>
+                                                                        <div class="strategy__table-percent _green">+59.23&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Доход за день</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">-&nbsp;$&nbsp;13&nbsp;890.83</div>
+                                                                        <div class="strategy__table-percent _green">-7.81&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Открытые сделки с&nbsp;плавающим результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$ 190 930 </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Закрытые сделки с&nbsp;зафиксированным результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;5&nbsp;000</div>
+                                                                        <div class="strategy__table-percent _green">+9&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Количество закрытых сделок</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">19</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="strategy__item">
+                                                <div class="strategy__wrapper">
+                                                    <div class="strategy__person person">
+                                                        <a href="" class="person__logo"><img src="../img/user.jpg" alt="Валентин Петухов" loading="lazy"></a>
+                                                        <div class="person__body">
+                                                            <a href="" class="person__title">Название стратегии</a>
+                                                            <div class="person__subtitle">Валентин Петухов</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="strategy__graph"><img src="../img/graph2.svg" alt="" loading="lazy"></div>
+
+                                                    <div class="strategy__table table">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общий доход</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">+&nbsp;$&nbsp;67&nbsp;893.29 </div>
+                                                                        <div class="strategy__table-percent _green">+59.23&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Доход за день</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">-&nbsp;$&nbsp;13&nbsp;890.83</div>
+                                                                        <div class="strategy__table-percent _green">-7.81&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Открытые сделки с&nbsp;плавающим результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$ 190 930 </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Закрытые сделки с&nbsp;зафиксированным результатом</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;5&nbsp;000</div>
+                                                                        <div class="strategy__table-percent _green">+9&nbsp;%</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Количество закрытых сделок</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">19</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add class "_active to show this tab" -->
+                            <div id="copytrade-tab-3" class="copytrade__content tabs__content">
+                                <div class="copytrade__subfilter filter">
+                                    <div class="filter__triggers">
+                                        <a href="#copytrade-tab-3-subtab-1" class="filter__trigger _active">Forex</a>
+                                        <a href="#copytrade-tab-3-subtab-2" class="filter__trigger">Crypto</a>
+                                    </div>
+                                </div>
+
+                                <div id="copytrade-tab-3-subtab-1" class="copytrade__subcontent tabs__content _active">
+                                    <div class="copytrade__strategy">
+                                        <div class="copytrade__strategy-heading">
+                                            <h2 class="copytrade__strategy-title">Активные стратегии</h2>
+                                            <a href="" class="copytrade__strategy-btn btn btn-color">Добавить стратегию</a>
+                                        </div>
+
+                                        <div class="strategy">
+                                            <div class="strategy__item">
+                                                <div class="strategy__wrapper">
+                                                    <div class="strategy__heading">
+                                                        <div class="strategy__date">Подключена 29.09.2020</div>
+                                                        <div class="strategy__name">Название стратегии</div>
+                                                    </div>
+
+                                                    <div class="strategy__table table">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общее кол-во инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">24</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Баланс инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;13&nbsp;890.83</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Средства инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;190&nbsp;930 </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общая зафиксированная прибыль всех инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;5&nbsp;000</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общий доход с инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;1&nbsp;983&nbsp;747</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <a href="copytrade-single.html" class="strategy__btn btn btn-border">Подробнее</a>
+                                                </div>
+                                            </div>
+                                            <div class="strategy__item">
+                                                <div class="strategy__wrapper">
+                                                    <div class="strategy__heading">
+                                                        <div class="strategy__date">Подключена 29.09.2020</div>
+                                                        <div class="strategy__name">Название стратегии</div>
+                                                    </div>
+
+                                                    <div class="strategy__table table">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общее кол-во инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">24</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Средства инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;190&nbsp;930 </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общая зафиксированная прибыль всех инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;5&nbsp;000</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="strategy__table-caption">Общий доход с инвесторов</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="strategy__table-total">$&nbsp;1&nbsp;983&nbsp;747</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <a href="copytrade-single.html" class="strategy__btn btn btn-border">Подробнее</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="copytrade__request request">
+                                        <h2 class="request__title">Заявки</h2>
+
+                                        <div data-spollers="" class="request__accordion accordion">
+                                            <div class="accordion__item">
+                                                <button tabindex="-1" type="button" data-spoller class="request__btn accordion__button">
+                                                    <div class="request__btn-title">Название стратегии</div>
+                                                    <div class="request__status request__status--pending">В ожидании</div>
+                                                </button>
+                                                <div class="accordion__text">
+                                                    <div class="request__info info info--pending"> Ваша заявка на рассмотрении, ожидайте </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__item">
+                                                <button tabindex="-1" type="button" data-spoller class="request__btn accordion__button">
+                                                    <div class="request__btn-title">Более длинное название стратегии с кратким описанием</div>
+                                                    <div class="request__status request__status--active">Активна</div>
+                                                </button>
+                                                <div class="accordion__text">
+                                                    <div class="request__info info info--accept"> Ваша заявка одобрена, заполните все поля для активации вашей стратегии </div>
+                                                    <a href="" class="btn btn-color btn-small">Заполнить</a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__item">
+                                                <button tabindex="-1" type="button" data-spoller class="request__btn accordion__button">
+                                                    <div class="request__btn-title">Ещё одно название стратегии</div>
+                                                    <div class="request__status request__status--rejected">Отклонена</div>
+                                                </button>
+                                                <div class="accordion__text">
+                                                    <div class="request__info info info--rejected"> К сожалению, Ваша заявка отклонена, данные были введены некорректно </div>
+                                                    <a href="" class="btn btn-color btn-small">Изменить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="copytrade__profitability copytrade-profitability">
+                                        <h2 class="copytrade-profitability__title">Доходность</h2>
+
+                                        <div class="copytrade-profitability__wrapper">
+                                            <div class="copytrade-profitability__card">
+                                                <div class="copytrade-profitability__card-wrapper">
+                                                    <div class="copytrade-profitability__card-heading">
+                                                        <h3 class="copytrade-profitability__card-title">График доходности</h3>
+
+                                                        <div class="copytrade-profitability__filter filter filter--select">
+                                                            <button type="button" class="filter__btn">
+                                                                <span>За месяц</span>
+
+                                                                <i class="icon-accordion-chevron"></i>
+                                                            </button>
+
+                                                            <div class="filter__triggers">
+                                                                <a href="" class="filter__trigger">За всё время</a>
+                                                                <a href="" class="filter__trigger">За день</a>
+                                                                <a href="" class="filter__trigger _active">За месяц</a>
+                                                                <a href="" class="filter__trigger">За пол года</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="copytrade-profitability__graph"><img src="../img/graph3.svg" alt="За месяц" loading="lazy"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="copytrade-profitability__card">
+                                                <h3 class="copytrade-profitability__card-title">Открытых позиций</h3>
+
+                                                <div class="copytrade-profitability__table copytrade-table copytrade-table_color table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Название позиции</th>
+                                                                <th>Размер</th>
+                                                                <th>Входная цена</th>
+                                                                <th>Отметка цены</th>
+                                                                <th>Мин. цена</th>
+                                                                <th>Коэфф. маржи</th>
+                                                                <th class="text-end">Маржа</th>
+                                                                <th>PNL (ROE%)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Название позиции</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">BTCUSDT</div>
+                                                                        <div class="copytrade-table__descr">Perpertual</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption"> Размер </div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val _green">2&nbsp;946,03 USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Входная цена</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">68&nbsp;393,61</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Отметка цены</div>
+                                                                    <div class="copytrade-table__body">68&nbsp;516,61</div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Мин. цена</div>
+                                                                    <div class="copytrade-table__body">46&nbsp;174,42</div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Коэфф. маржи</div>
+                                                                    <div class="copytrade-table__body">1,21%</div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Маржа</div>
+                                                                    <div class="copytrade-table__body text-end">
+                                                                        <div class="copytrade-table__val">23,57 USDT</div>
+                                                                        <div class="copytrade-table__descr">(Cross)</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">PNL (ROE%)</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">+&nbsp;0,76 USDT</div>
+                                                                        <div class="copytrade-table__descr _green">+3,23%</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Название позиции</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">BTCUSDT</div>
+                                                                        <div class="copytrade-table__descr">Perpertual</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption"> Размер </div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val _green">2&nbsp;946,03 USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Входная цена</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">68&nbsp;393,61</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Отметка цены</div>
+                                                                    <div class="copytrade-table__body">68&nbsp;516,61</div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Мин. цена</div>
+                                                                    <div class="copytrade-table__body">46&nbsp;174,42</div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Коэфф. маржи</div>
+                                                                    <div class="copytrade-table__body">1,21%</div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Маржа</div>
+                                                                    <div class="copytrade-table__body text-end">
+                                                                        <div class="copytrade-table__val">23,57 USDT</div>
+                                                                        <div class="copytrade-table__descr">(Cross)</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">PNL (ROE%)</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">+&nbsp;0,76 USDT</div>
+                                                                        <div class="copytrade-table__descr _green">+3,23%</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="copytrade-profitability__card">
+                                                <h3 class="copytrade-profitability__card-title">История сделок</h3>
+
+                                                <div class="copytrade-profitability__table copytrade-table copytrade-table_history table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Дата</th>
+                                                                <th>Пара</th>
+                                                                <th>Сторона</th>
+                                                                <th>Цена</th>
+                                                                <th>Исполнен</th>
+                                                                <th class="text-end">Комиссия</th>
+                                                                <th>Сумма</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Дата</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">19.03.2021</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Пара</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">ETH/USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Сторона</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">Продать</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Цена</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">4,428.18</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Исполнен</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">0.0086</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Комиссия</div>
+                                                                    <div class="copytrade-table__body text-end">
+                                                                        <div class="copytrade-table__val">0.0380827 USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Сумма</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">38.03808278 USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Дата</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">15.03.2021</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Пара</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">BTC/USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Сторона</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">Продать</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Цена</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">68,428.18</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Исполнен</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">1.00</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Комиссия</div>
+                                                                    <div class="copytrade-table__body text-end">
+                                                                        <div class="copytrade-table__val">0.038 USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Сумма</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">138.03808278 USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Дата</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">15.03.2021</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Пара</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">BNB/BUSD</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Сторона</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">Купить</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Цена</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">522.9</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Исполнен</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">15.00</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Комиссия</div>
+                                                                    <div class="copytrade-table__body text-end">
+                                                                        <div class="copytrade-table__val">1.038123 USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="copytrade-table__item">
+                                                                    <div class="copytrade-table__caption">Сумма</div>
+                                                                    <div class="copytrade-table__body">
+                                                                        <div class="copytrade-table__val">25.0380 USDT</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="copytrade-profitability__card-button"><a href="" class="btn btn-border">Показать еще 26</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    @@include('../html-components/_popup.html',{})
+    @@include('../html-components/_js.html',{})
+</body>
+
+</html>
