@@ -11,7 +11,7 @@
     z-index: 10;
     transition: $transition ease all 0s;
 
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet) {
         position: fixed;
         transform: translateY(-100%);
         max-width: 100%;
@@ -44,7 +44,7 @@
     }
 
     &__toggle {
-        @media screen and (min-width: $mobile) {
+        @media screen and (min-width: $tablet) {
             position: relative;
             display: inline-flex;
             font-size: 24px;
@@ -70,7 +70,7 @@
                 right: 7px;
             }
         }
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $tablet) {
             display: none;
         }
     }
@@ -112,7 +112,7 @@
         &:not(:last-child) {
             @include adaptiv-value("margin-right", 20, 10, 1);
 
-            @media screen and (max-width: $mobile) {
+            @media screen and (max-width: $tablet) {
                 margin-right: 20px;
             }
         }
@@ -136,7 +136,7 @@
         border: 4px solid transparent;
         box-sizing: content-box;
 
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $tablet) {
             width: 60px;
             height: 60px;
         }

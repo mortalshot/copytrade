@@ -1,9 +1,9 @@
 .recent-events {
     &:first-child {
-        @media screen and (min-width: $mobile) {
+        @media screen and (min-width: $tablet) {
             padding-top: 25px;
         }
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $tablet) {
             margin-top: 0 !important;
         }
     }

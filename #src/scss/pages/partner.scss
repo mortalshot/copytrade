@@ -339,14 +339,14 @@
         flex: 0 0 25%;
         @include adaptiv-value("padding", 8, 5, 1);
 
-        @media screen and (min-width: 1199.98) and (max-width: 1919.98) {
+        @media screen and (min-width: 1199.98px) and (max-width: 1919.98px) {
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     flex: 0 0 33.333%;
                 }
             }
         }
-        @media screen and (max-width: 1199.98) {
+        @media screen and (max-width: 1199.98px) {
             flex: 0 0 33.333%;
         }
         @media screen and (max-width: $tablet) {
@@ -632,6 +632,13 @@
 
     &__attribute {
         @include adaptiv-font(13, 18, 12, 1);
+
+        @media (max-width: $mobileSmall) {
+            flex: 0 0 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     &__attribute-label {
@@ -728,6 +735,7 @@
                 &::before {
                     content: "";
                     display: block;
+                    flex: 0 0 18px;
                     width: 18px;
                     height: 18px;
                     background: url(../img/icons/check3.svg) no-repeat center/cover;

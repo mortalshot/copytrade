@@ -419,7 +419,7 @@ body {
 
 .main {
     position: relative;
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet) {
         margin-top: 50px;
 
         & > section,

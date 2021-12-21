@@ -44,7 +44,7 @@
             }
 
             background-color: $Blue;
-            color: $White;
+            color: $White !important;
             cursor: auto;
         }
     }
@@ -102,7 +102,7 @@
                 padding: 6px 8px;
                 background-color: transparent;
                 text-align: left;
-                color: $fontColor;
+                color: $fontColor !important;
                 margin: 0;
             }
         }

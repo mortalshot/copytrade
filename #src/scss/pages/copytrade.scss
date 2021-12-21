@@ -783,7 +783,7 @@
                 }
 
                 &._active {
-                    color: $Blue;
+                    color: $Blue !important;
 
                     &::before {
                         opacity: 1;

@@ -201,7 +201,7 @@
 	}
 
 	&__item {
-		@media screen and (min-width: $mobile) {
+		@media screen and (min-width: $tablet) {
 			background-color: $LBlue;
 			border-radius: 10px;
 		}
@@ -253,7 +253,7 @@
 		left: 0;
 		right: 0;
 		@include adaptiv-value("height", 400, 370, 1);
-		background: url(../img/header-bg.jpg) no-repeat center/cover;
+		background: url("../img/header-bg.webp") no-repeat center/cover;
 	}
 
 	&__container {
@@ -275,13 +275,13 @@
 				width: 100%;
 			}
 		}
-		@media screen and (max-width: $mobile) {
+		@media screen and (max-width: $tablet) {
 			padding-top: 0;
 			padding-bottom: 0;
 		}
 
 		.user-nav {
-			@media screen and (max-width: $mobile) {
+			@media screen and (max-width: $tablet) {
 				position: fixed;
 				top: 0;
 				left: 0;
@@ -296,7 +296,7 @@
 	}
 
 	&__burger {
-		@media screen and (max-width: $mobile) {
+		@media screen and (max-width: $tablet) {
 			height: 26px;
 			width: 26px;
 			flex: 0 0 26px;
@@ -347,7 +347,7 @@
 	}
 
 	.balance {
-		@media screen and (max-width: $mobile) {
+		@media screen and (max-width: $tablet) {
 			margin-top: 82px;
 		}
 	}
@@ -363,7 +363,7 @@
 	@include adaptiv-value("margin-left", -29, -12, 1);
 	@include adaptiv-value("margin-right", -29, -12, 1);
 
-	@media screen and (max-width: $mobile) {
+	@media screen and (max-width: $tablet) {
 		width: 100%;
 		margin-top: 32px;
 	}

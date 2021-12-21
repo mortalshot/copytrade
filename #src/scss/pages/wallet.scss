@@ -185,6 +185,12 @@
         flex-wrap: wrap;
         row-gap: 20px;
         column-gap: 24px;
+
+        .arrows {
+            @media (max-width:$mobileSmall){
+                 display: none; 
+            }
+        }
     }
 }
 
@@ -220,7 +226,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         row-gap: 8px;
         column-gap: 16px;
 
@@ -244,10 +250,15 @@
     &__notification {
         display: block;
         width: 8px;
+        flex: 0 0 8px;
         height: 8px;
         border-radius: 100%;
         background-color: $Red;
         @include adaptiv-value("margin-left", 32, 16, 1);
+    }
+
+    &__btn {
+        min-width: 100px;
     }
 
     &__paid {
