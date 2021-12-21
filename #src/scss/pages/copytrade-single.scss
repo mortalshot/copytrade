@@ -10,11 +10,11 @@
     @include adaptiv-value("padding-left", 32, 16, 1);
     @include adaptiv-value("padding-right", 32, 16, 1);
 
-    @media screen and (min-width: 768px) and (max-width: 992px) {
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
         grid-template-columns: 1fr;
         gap: 0;
     }
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 574.98px) {
         background: $White;
         box-shadow: 2px 3px 12px rgba(29, 29, 80, 0.1);
         grid-template-columns: 1fr;
@@ -25,15 +25,15 @@
         @include adaptiv-value("column-gap", 24, 8, 1);
         text-align: left;
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: $tablet) {
             align-items: center;
         }
-        @media screen and (min-width: 768px) and (max-width: 992px) {
+        @media screen and (min-width: $mobile) and (max-width: $tablet) {
             &:not(:last-child) {
                 padding-bottom: 6px;
             }
         }
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             &:not(:last-child) {
                 padding-bottom: 6px;
             }
@@ -59,7 +59,7 @@
             font-weight: 500;
             @include adaptiv-font(13, 18, 10, 0);
 
-            @media screen and (max-width: 575px) {
+            @media screen and (max-width: 574.98px) {
                 font-size: 14px;
                 line-height: 20px;
             }
@@ -80,7 +80,7 @@
             }
         }
 
-        @media screen and (min-width: 768px) and (max-width: 992px) {
+        @media screen and (min-width: $mobile) and (max-width: $tablet) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -91,7 +91,7 @@
                 padding-bottom: 6px;
             }
         }
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -126,11 +126,11 @@
         column-gap: 8px;
         text-align: right;
 
-        @media screen and (min-width: 768px) and (max-width: 992px) {
+        @media screen and (min-width: $mobile) and (max-width: $tablet) {
             flex-direction: column-reverse;
             align-items: flex-end;
         }
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             flex-direction: column-reverse;
             align-items: flex-end;
         }
@@ -172,7 +172,7 @@
         font-weight: 700;
         @include adaptiv-font(24, 34, 16, 1);
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             flex: 0 0 100%;
         }
     }
@@ -183,7 +183,7 @@
         @include adaptiv-font(12, 17, 10, 0);
         color: $Grey;
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             text-align: left;
         }
     }
@@ -200,7 +200,7 @@
         @include adaptiv-value("row-gap", 16, 10, 1);
         grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
         }
     }
@@ -236,7 +236,7 @@
         &:not(:last-child) {
             margin-bottom: 8px;
 
-            @media screen and (max-width: 575px) {
+            @media screen and (max-width: 574.98px) {
                 margin-bottom: 16px;
             }
         }

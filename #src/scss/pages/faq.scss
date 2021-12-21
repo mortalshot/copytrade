@@ -25,7 +25,7 @@
     }
 
     &__contact {
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             width: 100%;
         }
 
@@ -38,7 +38,7 @@
             @include adaptiv-font(14, 20, 12, 1);
             text-align: left;
 
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: $mobileSmall) {
                 width: 100%;
             }
 

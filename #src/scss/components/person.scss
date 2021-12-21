@@ -11,10 +11,10 @@
         border-radius: 100%;
         overflow: hidden;
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             flex-basis: 54px;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $mobile) {
             @include adaptiv-value("flex-basis", 54, 45, 0);
         }
     }

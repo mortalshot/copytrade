@@ -22,7 +22,7 @@
         border-radius: 10px;
         @include adaptiv-value("padding", 32, 16, 1);
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: $tablet) {
             display: flex;
             align-items: stretch;
         }
@@ -37,7 +37,7 @@
         &:not(:last-child) {
             margin-right: 16px;
 
-            @media screen and (max-width: 991px) {
+            @media screen and (max-width: $tablet) {
                 margin: 0px 0px 24px 0px;
             }
         }
@@ -190,7 +190,7 @@
 .activity-report {
     @include adaptiv-value("padding-bottom", 64, 40, 1);
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tablet) {
         overflow: hidden;
     }
 
@@ -209,14 +209,14 @@
     }
 
     &__heading {
-        @media screen and (min-width: 576px) {
+        @media screen and (min-width: 574.98px) {
             display: flex;
             @include adaptiv-value("gap", 30, 10, 1);
             @include adaptiv-value("padding-left", 24, 16, 1);
             @include adaptiv-value("padding-right", 24, 16, 1);
             max-width: 89%;
         }
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             display: none;
         }
     }
@@ -229,7 +229,7 @@
     &__activity {
         flex: 1 1 100%;
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             &:not(:last-child) {
                 margin-bottom: 16px !important;
             }
@@ -272,7 +272,7 @@
         text-align: left;
         position: relative;
 
-        @media screen and (min-width: 576px) {
+        @media screen and (min-width: 574.98px) {
             display: flex;
             align-items: center;
         }
@@ -292,13 +292,13 @@
         }
 
         &::after {
-            @media screen and (max-width: 575px) {
+            @media screen and (max-width: 574.98px) {
                 display: none;
             }
         }
 
         .accordion__toggler {
-            @media screen and (min-width: 576px) {
+            @media screen and (min-width: 574.98px) {
                 display: none;
             }
         }
@@ -308,7 +308,7 @@
         @include adaptiv-value("gap", 30, 10, 1);
         width: 100%;
 
-        @media screen and (min-width: 576px) {
+        @media screen and (min-width: 574.98px) {
             display: flex;
             align-items: center;
             max-width: 89%;
@@ -316,7 +316,7 @@
     }
 
     &__td {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             display: flex;
             justify-content: space-between;
             gap: 10px;
@@ -328,10 +328,10 @@
     }
 
     &__td-label {
-        @media screen and (min-width: 576px) {
+        @media screen and (min-width: 574.98px) {
             display: none;
         }
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             font-size: 12px;
             line-height: 17px;
             color: $Grey;
@@ -347,7 +347,7 @@
         display: flex;
         align-items: center;
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             width: 100%;
         }
 
@@ -367,20 +367,20 @@
         @include adaptiv-font(16, 22, 13, 1);
         transition: $transition ease color 0s;
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             flex: 1;
         }
     }
 
     .tooltip__btn {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             padding-right: 0;
             padding-left: 0;
         }
     }
 
     .accordion__toggler {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             flex: 1;
             justify-content: space-between;
             margin-top: 16px;
@@ -409,7 +409,7 @@
             margin-bottom: 16px;
         }
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             display: block;
         }
     }
@@ -460,10 +460,10 @@
         text-align: right;
         flex: 1;
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: $tablet) {
             white-space: nowrap;
         }
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             text-align: left;
             margin-top: 4px;
             @include adaptiv-value("margin-left", 56, 48, 0);
@@ -478,7 +478,7 @@
         margin: -12px;
         max-width: 553px;
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             padding-left: 0;
             max-width: 100%;
             margin: -6px 0;
@@ -489,7 +489,7 @@
         flex: 0 0 33.333%;
         padding: 12px;
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             flex: 0 0 100%;
             padding: 6px 0;
             display: flex;
@@ -502,7 +502,7 @@
             &:not(:last-child) {
                 margin-bottom: 4px;
 
-                @media screen and (max-width: 575px) {
+                @media screen and (max-width: 574.98px) {
                     margin-bottom: 0;
                 }
             }

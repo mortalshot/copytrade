@@ -70,7 +70,7 @@
     }
 
     &__btn {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             width: 100%;
 
             a {
@@ -162,7 +162,7 @@
     }
 
     &__row {
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: $tablet) {
             display: flex;
 
             & > * {
@@ -171,7 +171,7 @@
                 }
             }
         }
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             @include adaptiv-value("padding-top", 32, 24, 0);
             @include adaptiv-value("padding-bottom", 32, 24, 0);
             @include adaptiv-value("padding-left", 32, 16, 0);
@@ -194,7 +194,7 @@
         border-radius: 10px;
         overflow: hidden;
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             position: relative;
             padding-bottom: 180px;
 
@@ -216,7 +216,7 @@
         flex-direction: column;
         justify-content: center;
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: $tablet) {
             @include adaptiv-value("padding-top", 32, 24, 1);
             @include adaptiv-value("padding-bottom", 32, 24, 1);
             @include adaptiv-value("padding-left", 32, 16, 1);
@@ -339,20 +339,20 @@
         flex: 0 0 25%;
         @include adaptiv-value("padding", 8, 5, 1);
 
-        @media screen and (min-width: 1200px) and (max-width: 1920px) {
+        @media screen and (min-width: 1199.98) and (max-width: 1919.98) {
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     flex: 0 0 33.333%;
                 }
             }
         }
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1199.98) {
             flex: 0 0 33.333%;
         }
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             flex: 0 0 50%;
         }
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             flex: 0 0 100%;
         }
     }
@@ -456,7 +456,7 @@
         color: $White;
         margin-right: 8px;
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             margin-left: -8px;
             margin-top: -8px;
             margin-bottom: -8px;
@@ -517,7 +517,7 @@
         flex: 0 0 39%;
         @include adaptiv-value("column-gap", 24, -16, 1);
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             flex: 0 0 100%;
             @include adaptiv-value("column-gap", 24, 16, 0);
         }

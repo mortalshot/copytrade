@@ -1,9 +1,9 @@
 .recent-events {
     &:first-child {
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $mobile) {
             padding-top: 25px;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $mobile) {
             margin-top: 0 !important;
         }
     }
@@ -27,7 +27,8 @@
         margin-right: -15px;
         margin-bottom: -7px;
 
-        @media screen and (max-width: 450px) {
+
+        @media screen and (max-width: $mobileSmall) {
             @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 0);
             @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 0);
             @include adaptiv-value("margin-left", -$containerPadding, -$containerPaddingMobile, 0);

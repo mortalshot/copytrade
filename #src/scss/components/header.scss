@@ -164,7 +164,7 @@
 		&:not(:last-child) {
 			@include adaptiv-value("margin-right", 56, 0, 1);
 
-			@media screen and (max-width: 767px) {
+			@media screen and (max-width: $mobile) {
 				@include adaptiv-value("margin-right", 56, 16, 0);
 			}
 		}
@@ -201,7 +201,7 @@
 	}
 
 	&__item {
-		@media screen and (min-width: 768px) {
+		@media screen and (min-width: $mobile) {
 			background-color: $LBlue;
 			border-radius: 10px;
 		}
@@ -263,7 +263,7 @@
 		@include adaptiv-value("padding-top", 40, 32, 1);
 		@include adaptiv-value("padding-bottom", 40, 32, 1);
 
-		@media screen and (max-width: 991px) {
+		@media screen and (max-width: $tablet) {
 			flex-direction: column;
 			gap: 40px;
 
@@ -275,13 +275,13 @@
 				width: 100%;
 			}
 		}
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: $mobile) {
 			padding-top: 0;
 			padding-bottom: 0;
 		}
 
 		.user-nav {
-			@media screen and (max-width: 767px) {
+			@media screen and (max-width: $mobile) {
 				position: fixed;
 				top: 0;
 				left: 0;
@@ -296,7 +296,7 @@
 	}
 
 	&__burger {
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: $mobile) {
 			height: 26px;
 			width: 26px;
 			flex: 0 0 26px;
@@ -347,7 +347,7 @@
 	}
 
 	.balance {
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: $mobile) {
 			margin-top: 82px;
 		}
 	}
@@ -363,7 +363,7 @@
 	@include adaptiv-value("margin-left", -29, -12, 1);
 	@include adaptiv-value("margin-right", -29, -12, 1);
 
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: $mobile) {
 		width: 100%;
 		margin-top: 32px;
 	}

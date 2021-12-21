@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     @include adaptiv-value("margin", -20, 20, 1);
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tablet) {
         margin: -8px;
     }
 
@@ -12,16 +12,16 @@
         @include adaptiv-value("padding", 20, -20, 1);
         flex: 0 0 50%;
 
-        @media screen and (min-width: 1921px) {
+        @media screen and (min-width: 1919.98px) {
             flex: 0 0 33.333%;
         }
-        @media screen and (min-width: 2561px) {
+        @media screen and (min-width: 2559.98px) {
             flex: 0 0 25%;
         }
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             padding: 8px;
         }
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             flex: 0 0 100%;
         }
     }
@@ -63,7 +63,7 @@
 
     a.showcase__image {
         cursor: pointer;
-        
+
         &::before {
             content: "";
             position: absolute;
@@ -171,7 +171,7 @@
     }
 
     &__action {
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             flex: 1;
         }
 
@@ -182,7 +182,7 @@
             @include adaptiv-value("padding-right", 32, 16, 1);
             @include adaptiv-font(14, 20, 12, 1);
 
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: $mobileSmall) {
                 width: 100%;
             }
         }
@@ -195,7 +195,7 @@
     flex-wrap: wrap;
     @include adaptiv-value("margin", -20, 20, 1);
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $tablet) {
         margin: -8px;
     }
 
@@ -203,23 +203,23 @@
         flex: 0 0 100%;
         @include adaptiv-value("padding", 20, -20, 1);
 
-        @media screen and (min-width: 575px) {
+        @media screen and (min-width: 574.98px) {
             flex: 0 0 50%;
         }
-        @media screen and (min-width: 1920px) {
+        @media screen and (min-width: 1919.98px) {
             flex: 0 0 33.333%;
         }
-        @media screen and (min-width: 2561px) {
+        @media screen and (min-width: 2559.98px) {
             flex: 0 0 25%;
         }
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             padding: 8px;
             flex: 0 0 100%;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $mobile) {
             flex: 0 0 50%;
         }
-        @media screen and (max-width: 650px) {
+        @media screen and (max-width: 649.98px) {
             flex: 0 0 100%;
         }
     }
@@ -362,10 +362,10 @@
         border-radius: 10px;
         @include adaptiv-font(13, 18, 11, 1);
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $mobile) {
             padding: 6px 10px;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $mobile) {
             background: transparent !important;
         }
 
@@ -410,7 +410,7 @@
             @include adaptiv-value("padding-left", 24, 15, 1);
             @include adaptiv-font(14, 20, 12, 1);
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: $mobile) {
                 flex-direction: column-reverse;
                 align-items: flex-start;
                 gap: 2px;
@@ -437,7 +437,7 @@
                 @include adaptiv-value("flex-basis", 20, 16, 1);
                 transition: $transition ease all 0s;
 
-                @media screen and (max-width: 767px) {
+                @media screen and (max-width: $mobile) {
                     top: 10px;
                     right: 10px;
                 }
@@ -463,7 +463,7 @@
 // copytrade-profitability ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 .copytrade-profitability {
     &__wrapper {
-        @media screen and (min-width: 575px) {
+        @media screen and (min-width: 574.98px) {
             background: $White;
             box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
             border-radius: 10px;
@@ -490,7 +490,7 @@
             }
         }
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             background: $White;
             box-shadow: 4px 8px 34px rgba(29, 29, 80, 0.1);
             border-radius: 10px;
@@ -505,7 +505,7 @@
         justify-content: space-between;
         gap: 16px;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $mobile) {
             align-items: center;
         }
 
@@ -564,12 +564,12 @@
     @media screen and (min-width: $layoutDesktop + 0.02 + "px") {
         @include adaptiv-font(12, 17, 10, 0);
     }
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 574.98px) {
         overflow: initial;
     }
 
     thead {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             display: none;
         }
     }
@@ -583,7 +583,7 @@
     }
 
     tr {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             display: block;
             background: $White;
             box-shadow: 2px 3px 12px rgba(29, 29, 80, 0.1);
@@ -597,12 +597,12 @@
     }
 
     td {
-        @media screen and (min-width: 575px) {
+        @media screen and (min-width: 574.98px) {
             &:last-child {
                 text-align: right;
             }
         }
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             &:not(:last-child) {
                 padding-right: 0 !important;
                 padding-bottom: 8px;
@@ -615,7 +615,7 @@
     }
 
     &__item {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -626,13 +626,13 @@
         font-weight: 400;
         color: $DGrey;
 
-        @media screen and (min-width: 575px) {
+        @media screen and (min-width: 574.98px) {
             display: none;
         }
     }
 
     &__body {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             text-align: right;
             font-weight: 600;
         }
@@ -667,7 +667,7 @@
         }
 
         td {
-            @media screen and (min-width: 575px) {
+            @media screen and (min-width: 574.98px) {
                 padding: 20px 8px;
                 @include adaptiv-value("padding-top", 20, 10, 1);
                 @include adaptiv-value("padding-bottom", 20, 10, 1);
@@ -694,7 +694,7 @@
         tr {
             &:not(:last-child) {
                 td {
-                    @media screen and (min-width: 575px) {
+                    @media screen and (min-width: 574.98px) {
                         padding-bottom: 16px;
                         border-bottom: 1px solid #d5dbe4;
                     }
@@ -702,14 +702,14 @@
             }
             &:last-child {
                 td {
-                    @media screen and (min-width: 575px) {
+                    @media screen and (min-width: 574.98px) {
                         padding-bottom: 16px;
                     }
                 }
             }
 
             td {
-                @media screen and (min-width: 575px) {
+                @media screen and (min-width: 574.98px) {
                     padding-top: 16px;
                 }
             }
@@ -738,7 +738,7 @@
         padding-left: 32px;
         padding-right: 32px;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             @include adaptiv-value("margin-left", -$containerPadding, -$containerPaddingMobile, 0);
             @include adaptiv-value("margin-right", -$containerPadding, -$containerPaddingMobile, 0);
             border-radius: 0 0 12px 12px;
@@ -752,7 +752,7 @@
             &__triggers {
                 column-gap: 30px;
 
-                @media screen and (max-width: 450px) {
+                @media screen and (max-width: $mobileSmall) {
                     justify-content: center;
                 }
             }
@@ -821,7 +821,7 @@
     &__strategy-btn {
         @include adaptiv-value("min-height", 52, 45, 1);
 
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             font-size: 0;
             line-height: 1;
             background: transparent;

@@ -23,6 +23,14 @@
             height: 24px;
             background: transparent;
         }
+
+        .fancybox__iframe {
+            & + .carousel__button.is-close {
+                top: -40px;
+                right: 0;
+                color: $White;
+            }
+        }
     }
 
     &__iframe {

@@ -8,7 +8,7 @@
         row-gap: 25px;
         column-gap: 40px;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             flex-direction: column;
         }
     }
@@ -16,7 +16,7 @@
     &__balance {
         text-align: right;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             text-align: left;
         }
     }
@@ -42,16 +42,16 @@
         flex-wrap: wrap;
         @include adaptiv-value("margin", -20, 20, 1);
 
-        @media screen and (min-width: 2561px) {
+        @media screen and (min-width: 2560.98px) {
             max-width: 65%;
         }
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             @include adaptiv-value("margin", -20, 0, 0);
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $mobile) {
             @include adaptiv-value("margin", -20, -5, 0);
         }
-        @media screen and (max-width: 450) {
+        @media screen and (max-width: $mobileSmall) {
             margin: -10px 0;
         }
     }
@@ -60,14 +60,14 @@
         @include adaptiv-value("padding", 20, -20, 1);
         flex: 0 0 33.333%;
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $tablet) {
             flex: 0 0 50%;
             @include adaptiv-value("padding", 20, 0, 0);
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $mobile) {
             @include adaptiv-value("padding", 20, 5, 0);
         }
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             flex: 0 0 100%;
             padding: 10px 0;
         }
@@ -117,7 +117,7 @@
         }
 
         th {
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: $mobileSmall) {
                 display: none;
             }
 
@@ -127,7 +127,7 @@
         }
 
         tr {
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: $mobileSmall) {
                 display: block;
 
                 &:not(:last-child) {
@@ -144,7 +144,7 @@
         padding-bottom: 12px;
         @include adaptiv-font(16, 22, 12, 1);
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -157,10 +157,10 @@
     }
 
     &__title {
-        @media screen and (min-width: 450px) {
+        @media screen and (min-width: $mobileSmall) {
             display: none;
         }
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             font-weight: 500;
             @include adaptiv-font(14, 17, 10, 1);
             color: $Grey;
@@ -169,7 +169,7 @@
     }
 
     &__text {
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: $mobileSmall) {
             text-align: right;
         }
     }

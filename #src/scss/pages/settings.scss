@@ -24,7 +24,7 @@
         column-gap: 20px;
         row-gap: 40px;
 
-        @media screen and (min-width: 2561px) {
+        @media screen and (min-width: 2560.98px) {
             max-width: 65%;
         }
     }
@@ -32,12 +32,12 @@
     &__image {
         flex: 0 1 30%;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tablet) {
             &:not(:last-child) {
                 @include adaptiv-value("padding-right", 80, -40, 1);
             }
         }
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1199.98px) {
             flex: 0 0 100%;
         }
     }
@@ -57,7 +57,7 @@
             }
 
             &__item {
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: $mobile) {
                     margin-bottom: 0;
                 }
             }
@@ -296,12 +296,12 @@
     }
 
     &__button {
-        @media screen and (max-width: 575px) {
+        @media screen and (max-width: 574.98px) {
             flex: 1;
         }
 
         .btn {
-            @media screen and (max-width: 575px) {
+            @media screen and (max-width: 574.98px) {
                 width: 100%;
                 padding-left: 10px;
                 padding-right: 10px;
@@ -309,7 +309,7 @@
         }
 
         .btn-color {
-            @media screen and (min-width: 575px) {
+            @media screen and (min-width: 574.98px) {
                 @include adaptiv-value("padding-left", 65.5, 25, 1);
                 @include adaptiv-value("padding-right", 65.5, 25, 1);
             }
