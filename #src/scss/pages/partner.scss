@@ -517,9 +517,11 @@
         flex: 0 0 39%;
         @include adaptiv-value("column-gap", 24, -16, 1);
 
-        @media screen and (max-width: $tablet) {
-            flex: 0 0 100%;
+        @media (max-width: $tablet) {
             @include adaptiv-value("column-gap", 24, 16, 0);
+        }
+        @media screen and (max-width: $mobileSmall) {
+            flex: 0 0 100%;
         }
     }
 

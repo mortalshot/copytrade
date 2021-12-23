@@ -12,43 +12,30 @@
         @include adaptiv-value("margin-bottom", 44, 20, 1);
     }
 
-    &__container {
-    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        @include adaptiv-value("margin", -20, -10, 1);
 
-    &__title {
-    }
-
-    &__swiper {
-        overflow: hidden;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 20px;
-        margin-left: -15px;
-        margin-right: -15px;
-        margin-bottom: -7px;
-
-
-        @media screen and (max-width: $mobileSmall) {
-            @include adaptiv-value("padding-left", $containerPadding, $containerPaddingMobile, 0);
-            @include adaptiv-value("padding-right", $containerPadding, $containerPaddingMobile, 0);
-            @include adaptiv-value("margin-left", -$containerPadding, -$containerPaddingMobile, 0);
-            @include adaptiv-value("margin-right", -$containerPadding, -$containerPaddingMobile, 0);
-        }
-
-        .swiper {
-            overflow: visible;
-
-            &._init {
-                .recent-events__item {
-                    flex-basis: initial;
-                }
-            }
+        @media (max-width: $pc) {
+            @include adaptiv-value("margin", -10, -6, 1);
         }
     }
 
     &__item {
         flex: 0 0 33.333%;
         height: auto;
+        @include adaptiv-value("padding", 20, 10, 1);
+
+        @media (max-width: $pc) {
+            @include adaptiv-value("padding", 10, 6, 1);
+        }
+        @media (max-width: $mobile) {
+            flex: 0 0 50%;
+        }
+        @media (max-width: $mobileSmall) {
+            flex: 0 0 100%;
+        }
     }
 
     &__item-wrapper {
@@ -100,8 +87,5 @@
             color: $DGrey;
             text-decoration: underline $DGrey from-font;
         }
-    }
-
-    & + .profitability {
     }
 }

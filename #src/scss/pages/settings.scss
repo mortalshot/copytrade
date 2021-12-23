@@ -19,7 +19,7 @@
         padding-top: 24px;
         padding-bottom: 24px;
         @include adaptiv-value("padding-left", 40, 16, 1);
-        @include adaptiv-value("padding-right", 40, 16, 1);
+        @include adaptiv-value("padding-right", 56, 16, 1);
         max-width: 890px;
         column-gap: 20px;
         row-gap: 40px;
@@ -37,8 +37,12 @@
                 @include adaptiv-value("padding-right", 80, -40, 1);
             }
         }
-        @media screen and (max-width: 1199.98px) {
+        @media (max-width: $mobile) {
             flex: 0 0 100%;
+        }
+        @media (max-width: $mobileSmall) {
+            display: flex;
+            justify-content: center;
         }
     }
 
@@ -118,6 +122,10 @@
     }
 
     &__avatar {
+        @media (max-width:$mobileSmall){
+             margin-left: auto;
+             margin-right: auto; 
+        }
     }
 
     &__form {

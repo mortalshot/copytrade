@@ -63,7 +63,7 @@
         width: 100%;
         height: 100%;
         border-radius: 10px;
-        min-height: 340px;
+        @include adaptiv-value("min-height", 340, 168, 1);
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -79,7 +79,7 @@
             right: 0;
             top: 0;
             bottom: 0;
-            background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
         }
 
         @media (any-hover: hover) {
@@ -91,23 +91,26 @@
                 }
             }
         }
+        @media (any-hover: none) {
+            padding: 16px;
+        }
     }
 
     &__back {
-        padding: 16px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: rgba(40, 44, 51, 0.9);
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
         gap: 8px;
 
         @media (any-hover: hover) {
+            padding: 16px;
+            background: rgba(40, 44, 51, 0.9);
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -116,6 +119,7 @@
     }
 
     &__link {
+        display: inline-flex;
         width: 100%;
         max-width: 186px;
         margin-left: auto;
@@ -126,6 +130,32 @@
         position: relative;
         z-index: 2;
 
+        @media (any-hover: none) {
+            font-size: 0;
+            padding: 0;
+            line-height: 1;
+            border: 0 !important;
+            flex-shrink: 0;
+            flex-basis: 30px;
+            width: 30px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2) !important;
+
+            &::before {
+                font-family: "icomoon" !important;
+                line-height: 1;
+                color: $White;
+                border-radius: 8px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
         &.btn-border {
             background-color: transparent;
             color: $White;
@@ -133,6 +163,34 @@
             @media (any-hover: hover) {
                 &:hover {
                     color: $Blue;
+                }
+            }
+        }
+
+        &_watch {
+            @media (any-hover: none) {
+                &::before {
+                    content: "\e910";
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &_download {
+            background-color: $Blue;
+            color: $White;
+            transition: $transition ease all 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: rgba($color: $Blue, $alpha: 0.8);
+                }
+            }
+
+            @media (any-hover: none) {
+                &::before {
+                    content: "\e920";
+                    font-size: 18px;
                 }
             }
         }
@@ -169,11 +227,21 @@
         }
     }
 
-    &__description {
-        padding: 14px;
+    &__footer {
         flex: 1;
         display: flex;
+        justify-content: space-between;
         align-items: flex-end;
+        gap: 8px;
+        padding: 14px;
+
+        @media (any-hover: none) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__description {
         position: relative;
         z-index: 1;
     }
@@ -185,5 +253,11 @@
         flex-wrap: wrap;
         row-gap: 20px;
         column-gap: 24px;
+
+        .arrows {
+            @media (max-width:$mobileSmall){
+                 display: none; 
+            }
+        }
     }
 }

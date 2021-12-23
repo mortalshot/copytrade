@@ -27,6 +27,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-download:before {
+  content: "\e920";
+}
 .icon-trash:before {
   content: "\e91b";
 }
